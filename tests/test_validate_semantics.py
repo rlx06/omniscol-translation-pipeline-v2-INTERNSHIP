@@ -57,3 +57,26 @@ def test_no_false_positive_when_translations_differ():
     issues = validate_semantics(nkeys, pl, glossary, "pl", forbidden_pairs)
     errors = [i for i in issues if i.severity == "ERROR"]
     assert not errors
+
+
+def test_same_source_consistency_catches_drift():
+    from src.validate_semantics import validate_same_source_consistency
+
+    fr = {"button.cancel.a": "Annuler", "button.cancel.b": "Annuler"}
+    pl_inconsistent = {"button.cancel.a": "Anuluj", "button.cancel.b": "Przerwij"}
+
+    nkeys = normalize_all(fr, pl_inconsistent)
+    issues = validate_same_source_consistency(nkeys, pl_inconsistent)
+    assert len(issues) == 1
+    assert issues[0].severity == "WARNING"
+
+
+def test_same_source_consistency_no_false_positive_when_consistent():
+    from src.validate_semantics import validate_same_source_consistency
+
+    fr = {"button.cancel.a": "Annuler", "button.cancel.b": "Annuler"}
+    pl_consistent = {"button.cancel.a": "Anuluj", "button.cancel.b": "Anuluj"}
+
+    nkeys = normalize_all(fr, pl_consistent)
+    issues = validate_same_source_consistency(nkeys, pl_consistent)
+    assert issues == []

@@ -39,7 +39,11 @@ from src.models import ValidationIssue
 from src.normalize import normalize_all
 from src.prompt import build_prompt
 from src.review import run_llm_review
-from src.validate_semantics import validate_semantics
+from src.validate_semantics import validate_semantics, validate_same_source_consistency
+from src.validate_canonical import validate_canonical_labels, bootstrap_canonical_targets
+from src.translation_memory import TranslationMemory
+
+MEMORY_PATH = Path(__file__).resolve().parent.parent / "memory" / "translation_memory.json"
 from src.validate_structure import validate_all_structure
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
@@ -57,7 +61,7 @@ def _load_pipeline_config():
 
 
 def cmd_audit_v2(args: argparse.Namespace) -> None:
-    glossary, _labels, forbidden_pairs = _load_pipeline_config()
+    glossary, canonical_labels, forbidden_pairs = _load_pipeline_config()
 
     fr_translations = load_translations(SOURCE_FILES[args.module])
     target_path = LANGUAGES_DIR / f"{args.lang}_{args.module}.json"
@@ -70,7 +74,9 @@ def cmd_audit_v2(args: argparse.Namespace) -> None:
     semantic_issues = validate_semantics(
         nkeys, target_translations, glossary, args.lang, forbidden_pairs,
     )
-    all_issues = structural_issues + semantic_issues
+    canonical_issues = validate_canonical_labels(target_translations, canonical_labels, args.lang)
+    consistency_issues = validate_same_source_consistency(nkeys, target_translations)
+    all_issues = structural_issues + semantic_issues + canonical_issues + consistency_issues
 
     from src.export import render_review_queue_markdown
     report = render_review_queue_markdown(all_issues, args.lang, args.module)
@@ -96,15 +102,37 @@ def cmd_generate_v2(args: argparse.Namespace) -> None:
     missing_nkeys = [k for k in nkeys if k.target is None]
     print(f"{len(missing_nkeys)} missing keys out of {len(nkeys)} total for {args.lang}_{args.module}")
 
+    # Translation memory: bootstrap from whatever is already correctly
+    # translated in this file, then check memory before ever calling the
+    # LLM, so the same French text always reuses the same committed
+    # translation instead of drifting between runs.
+    MEMORY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    memory = TranslationMemory(MEMORY_PATH)
+    added = memory.bootstrap_from_existing(args.lang, fr_translations, target_translations)
+    if added:
+        print(f"Translation memory: bootstrapped {added} entries from existing {args.lang} data")
+
+    reused_from_memory: dict[str, str] = {}
+    still_missing: list = []
+    for nkey in missing_nkeys:
+        cached = memory.lookup(args.lang, nkey.fr)
+        if cached:
+            reused_from_memory[nkey.key] = cached
+        else:
+            still_missing.append(nkey)
+    if reused_from_memory:
+        print(f"Translation memory: reused {len(reused_from_memory)} translations "
+              f"without calling the LLM (identical French text already translated elsewhere)")
+
     if args.live:
         client = GeminiLLMClient(GCP_PROJECT_ID, GCP_LOCATION, GEMINI_MODEL)
     else:
         client = MockLLMClient()
 
-    batches = build_batches(missing_nkeys)
-    print(f"Built {len(batches)} semantic batches")
+    batches = build_batches(still_missing)
+    print(f"Built {len(batches)} semantic batches for {len(still_missing)} genuinely new keys")
 
-    all_new_translations: dict[str, str] = {}
+    all_new_translations: dict[str, str] = dict(reused_from_memory)
     all_review = {"blockers": [], "warnings": [], "suggestions": []}
 
     for batch in batches:
@@ -116,9 +144,21 @@ def cmd_generate_v2(args: argparse.Namespace) -> None:
         for k in ("blockers", "warnings", "suggestions"):
             all_review[k].extend(review.get(k, []))
 
+    # Record every newly-translated (non-reused) key into memory for future runs
+    fr_by_key = {k.key: k.fr for k in still_missing}
+    for key, translation in all_new_translations.items():
+        if key in reused_from_memory:
+            continue
+        fr_text = fr_by_key.get(key)
+        if fr_text:
+            memory.record(args.lang, fr_text, translation, key)
+    memory.save()
+
     merged_for_validation = {**target_translations, **all_new_translations}
     structural_issues = validate_all_structure(nkeys, merged_for_validation)
     semantic_issues = validate_semantics(nkeys, merged_for_validation, glossary, args.lang, forbidden_pairs)
+    canonical_issues = validate_canonical_labels(merged_for_validation, canonical_labels, args.lang)
+    consistency_issues = validate_same_source_consistency(nkeys, merged_for_validation)
 
     # LLM review findings must land in the same human queue - previously these
     # were only printed as a count and then discarded, which meant a supervisor
@@ -131,7 +171,7 @@ def cmd_generate_v2(args: argparse.Namespace) -> None:
 
     paths = export_results(
         target_translations, all_new_translations,
-        structural_issues + semantic_issues + llm_issues,
+        structural_issues + semantic_issues + canonical_issues + consistency_issues + llm_issues,
         REPORTS_V2_DIR, args.lang, args.module,
     )
     print("Exported:")

@@ -27,6 +27,11 @@ PLACEHOLDER_PATTERNS = [
 ]
 
 HTML_TAG_PATTERN = re.compile(r"</?[a-zA-Z][a-zA-Z0-9]*(?:\s[^<>]*)?>")
+# Matches a mailto href's query-string values (e.g. ?subject=...&body=...),
+# which legitimately contain translated text per language and must not be
+# compared verbatim. Everything else in the tag (class names, other
+# attributes) is left untouched, since those must stay identical.
+MAILTO_QUERY_VALUE_PATTERN = re.compile(r"(mailto:[^\"?]*\?[^\"]*)")
 
 TRAILING_PUNCT = {"?", "!", ":", "...", "…"}
 
@@ -47,9 +52,19 @@ def extract_placeholders(text: str) -> list[str]:
 
 
 def extract_html_tags(text: str) -> list[str]:
+    """
+    Returns the HTML tags found in `text`, with one narrow normalization:
+    a mailto href's query string (e.g. ?subject=...) is redacted, because
+    that content is legitimately translated per language. Every other
+    attribute (class names, ids, etc.) is preserved as-is, since a
+    mismatch there is a real bug - e.g. a CSS icon class name that was
+    accidentally translated (fa-user-plus -> fa-utente-plus) must still
+    be caught.
+    """
     if not isinstance(text, str):
         return []
-    return HTML_TAG_PATTERN.findall(text)
+    tags = HTML_TAG_PATTERN.findall(text)
+    return [MAILTO_QUERY_VALUE_PATTERN.sub("mailto:REDACTED", tag) for tag in tags]
 
 
 def extract_trailing_punctuation(text: str) -> str | None:

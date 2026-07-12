@@ -94,3 +94,47 @@ def validate_semantics(
                     ))
 
     return issues
+
+
+def validate_same_source_consistency(
+    nkeys: list[NormalizedKey],
+    target_translations: dict[str, str],
+) -> list[ValidationIssue]:
+    """
+    Same French source text must produce the same translation everywhere;
+    this is the complement to translation memory (which enforces it going
+    forward) - this check catches existing drift in already-translated
+    files. Skips text under ~4 chars (too many legitimate short-word
+    coincidences like "Oui"/"Non" reused across unrelated contexts) and
+    only flags when the two translations are NOT near-identical, so minor
+    capitalization/whitespace differences don't produce noise.
+    """
+    issues: list[ValidationIssue] = []
+    by_source: dict[str, list[tuple[str, str]]] = {}
+
+    for nkey in nkeys:
+        target_text = target_translations.get(nkey.key)
+        if not target_text or len(nkey.fr) < 4:
+            continue
+        by_source.setdefault(_norm(nkey.fr), []).append((nkey.key, target_text))
+
+    for norm_fr, entries in by_source.items():
+        if len(entries) < 2:
+            continue
+        seen_translations: dict[str, str] = {}  # normalized translation -> first key
+        for key, translation in entries:
+            norm_t = _norm(translation)
+            if not seen_translations:
+                seen_translations[norm_t] = key
+                continue
+            if norm_t not in seen_translations:
+                first_key = next(iter(seen_translations.values()))
+                issues.append(ValidationIssue(
+                    key, "WARNING",
+                    f"Same French source text as '{first_key}' but different translation: "
+                    f"'{key}' -> {translation!r} vs '{first_key}' -> {entries[0][1]!r}",
+                    "semantic",
+                ))
+                seen_translations[norm_t] = key
+
+    return issues
