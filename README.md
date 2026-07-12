@@ -1,4 +1,9 @@
- PIPELINE EXPLANATION
+## Relationship to prior work
+This continues the AI Clinic project (github.com/rlx06/Omniscol_AI_clinic_S4),
+implementing the V2 semantic architecture requested by Mr. Gilles BLANC.
+
+
+PIPELINE EXPLANATION
 
 
 ## Translation Pipeline Design
