@@ -1,0 +1,13 @@
+{
+  "_comment": "Canonical UI labels: the single bare key per concept (e.g. 'class' -> 'Classe') that all tooltips/help text/descriptions must reuse, per Omniscol's rule that UI labels are the source of truth for naming a concept.",
+
+  "class": {"concept_id": "class", "fr": "Classe", "pl": "Klasa"},
+  "classroom": {"concept_id": "classroom", "fr": "Salle", "pl": "Sala"},
+  "subject": {"concept_id": "subject", "fr": "Matiere", "pl": "Przedmiot"},
+  "group": {"concept_id": "group", "fr": "Groupe", "pl": "Grupa"},
+  "role.teacher": {"concept_id": "teacher", "fr": "Professeur", "pl": "Nauczyciel"},
+  "role.main_teacher": {"concept_id": "head_teacher", "fr": "Professeur principal", "pl": "Wychowawca"},
+  "role.director": {"concept_id": "director", "fr": "Directeur", "pl": "Dyrektor"},
+  "action.activate": {"concept_id": "activate", "fr": "Activer", "pl": "Aktywuj"},
+  "action.enable": {"concept_id": "enable", "fr": "Activer", "pl": "Wlacz"}
+}

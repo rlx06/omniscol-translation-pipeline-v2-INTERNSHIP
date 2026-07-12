@@ -1,0 +1,15 @@
+{
+  "_comment": "Concept pairs that must never be translated identically. Derived from config/concepts.json 'forbidden_confusions' - kept as a flat lookup for the validator.",
+  "pairs": [
+    ["activate", "enable"],
+    ["class", "lesson"],
+    ["class", "group"],
+    ["lesson", "subject"],
+    ["classroom", "resource"],
+    ["absence", "conflict"],
+    ["partition", "alignment"],
+    ["teacher", "student"],
+    ["teacher", "head_teacher"],
+    ["director", "head_teacher"]
+  ]
+}

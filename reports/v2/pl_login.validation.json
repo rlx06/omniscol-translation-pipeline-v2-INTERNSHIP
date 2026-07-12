@@ -1,0 +1,34 @@
+{
+  "issues": [
+    {
+      "key": "newschool.title",
+      "severity": "WARNING",
+      "message": "Capitalization pattern differs: source=sentence target=title",
+      "stage": "structural"
+    },
+    {
+      "key": "school.activate.need_code",
+      "severity": "REVIEW",
+      "message": "Expected concept term for ['activate'] not clearly found in target text 'Musisz podać kod aktywacyjny.'",
+      "stage": "semantic"
+    },
+    {
+      "key": "school.activate.success",
+      "severity": "REVIEW",
+      "message": "Expected concept term for ['activate'] not clearly found in target text 'Gratulacje! Twoja szkoła została pomyślnie aktywowana.<br>Możesz się teraz zalogować.'",
+      "stage": "semantic"
+    },
+    {
+      "key": "school.activate.email_resent",
+      "severity": "REVIEW",
+      "message": "Expected concept term for ['activate'] not clearly found in target text 'E-mail aktywacyjny został do Ciebie ponownie wysłany!'",
+      "stage": "semantic"
+    },
+    {
+      "key": "error.password_reset.not_found",
+      "severity": "REVIEW",
+      "message": "Expected concept term for ['lesson'] not clearly found in target text 'Nieprawidłowy kod lub brak aktywnego żądania zmiany hasła'",
+      "stage": "semantic"
+    }
+  ]
+}

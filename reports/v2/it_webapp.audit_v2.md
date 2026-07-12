@@ -1,0 +1,62 @@
+# Review queue - webapp (it)
+
+## Summary
+- **BLOCKER**: 4
+- **ERROR**: 6
+- **WARNING**: 44
+
+## Flagged keys
+- **[BLOCKER]** `admin.students.add.info` (structural): HTML tag mismatch: source=['<br>', '<i class="fas fa-user-plus">', '</i>'] target=['<br>', '<i class="fas fa-utente-plus">', '</i>']
+- **[BLOCKER]** `admin.teachers.add.info` (structural): HTML tag mismatch: source=['<br>', '<i class="fas fa-user-plus">', '</i>'] target=['<br>', '<i class="fas fa-utente-plus">', '</i>']
+- **[BLOCKER]** `class.teachers.assign.info` (structural): HTML tag mismatch: source=['<br>', '<i class="fas fa-user-plus">', '</i>'] target=['<br>', '<i class="fas fa-utente-plus">', '</i>']
+- **[BLOCKER]** `class.teachers.assign.lesson.info` (structural): HTML tag mismatch: source=['<br>', '<i class="fas fa-user-plus">', '</i>'] target=['<br>', '<i class="fas fa-utente-plus">', '</i>']
+- **[ERROR]** `absence.reason.canceledclasses` (semantic): Forbidden concept confusion: 'absence.reason.canceledclasses' (concept=class) and 'sched.courses.canceled' (concept=lesson) both translate to 'Lezioni annullate' - these concepts must not collapse together (see config/concepts.json).
+- **[ERROR]** `action.activate` (semantic): Forbidden concept confusion: 'action.activate' (concept=activate) and 'action.enable' (concept=enable) both translate to 'Attiva' - these concepts must not collapse together (see config/concepts.json).
+- **[ERROR]** `action.enable` (semantic): Forbidden concept confusion: 'action.enable' (concept=activate) and 'action.activate' (concept=enable) both translate to 'Attiva' - these concepts must not collapse together (see config/concepts.json).
+- **[ERROR]** `diagnose.problem.spacesetdupl.descr` (semantic): Forbidden concept confusion: 'diagnose.problem.spacesetdupl.descr' (concept=class) and 'diagnose.problem.timesetdupl.descr' (concept=group) both translate to 'Gruppo <em>{group}</em> della classe <em>{class}</em>' - these concepts must not collapse together (see config/concepts.json).
+- **[ERROR]** `diagnose.problem.timesetdupl.descr` (semantic): Forbidden concept confusion: 'diagnose.problem.timesetdupl.descr' (concept=class) and 'diagnose.problem.spacesetdupl.descr' (concept=group) both translate to 'Gruppo <em>{group}</em> della classe <em>{class}</em>' - these concepts must not collapse together (see config/concepts.json).
+- **[ERROR]** `subjects.import.from_class` (semantic): Forbidden concept confusion: 'subjects.import.from_class' (concept=class) and 'groups.import.from_class' (concept=group) both translate to 'Importare dalla classe' - these concepts must not collapse together (see config/concepts.json).
+- **[WARNING]** `admin.parameters.studentrestriction` (structural): Trailing punctuation differs: source=None target='.'
+- **[WARNING]** `admin.students.add.info` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `admin.students.none` (structural): Trailing punctuation differs: source=None target='.'
+- **[WARNING]** `admin.teachers.add.info` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `class.subjects.hw.min` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `class.subjects.hw.min` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `class.subjects.hy.min` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `class.teachers.assign.info` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `class.wishes.descr` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `classroom.specialisation.add` (structural): Trailing punctuation differs: source='…' target='...'
+- **[WARNING]** `classroom.wishes.descr` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `day.friday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.monday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.saturday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.sunday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.thursday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.tuesday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `day.wednesday` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `error.algo.configgroup.amount` (structural): Trailing punctuation differs: source=None target='.'
+- **[WARNING]** `login.password.ask` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `module.home` (structural): Capitalization pattern differs: source=sentence target=title
+- **[WARNING]** `module.schedule` (structural): Capitalization pattern differs: source=upper target=sentence
+- **[WARNING]** `module.schedules` (structural): Capitalization pattern differs: source=upper target=sentence
+- **[WARNING]** `module.timetables` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `name.short` (structural): Trailing punctuation differs: source=None target='.'
+- **[WARNING]** `role.cpe` (structural): Capitalization pattern differs: source=upper target=title
+- **[WARNING]** `sched.all` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.create.action` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.days.info` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `sched.distribution` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.distribution.error_assoc_nb_groups` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `sched.edit.action` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.generate.action` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.management` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `sched.modifications.course.added` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `sched.modifications.course.at` (structural): Capitalization pattern differs: source=lower target=sentence
+- **[WARNING]** `sched.next_year` (structural): Capitalization pattern differs: source=sentence target=title
+- **[WARNING]** `sched.previous_year` (structural): Capitalization pattern differs: source=sentence target=title
+- **[WARNING]** `sched.school_year` (structural): Capitalization pattern differs: source=sentence target=title
+- **[WARNING]** `sched.this` (structural): Capitalization pattern differs: source=title target=sentence
+- **[WARNING]** `subject.parent` (structural): Capitalization pattern differs: source=sentence target=title
+- **[WARNING]** `subject.wishes.descr` (structural): Trailing punctuation differs: source='.' target=None
+- **[WARNING]** `title.m.short` (structural): Capitalization pattern differs: source=upper target=sentence
+- **[WARNING]** `wishes.unavail` (structural): Trailing punctuation differs: source=None target='.'

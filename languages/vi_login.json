@@ -1,0 +1,97 @@
+{
+    "success": true,
+    "translations": {
+      "action.login": "Iniciar sessão",
+      "action.confirm": "Confirmar",
+  
+      "login.identifier": "Nome de utilizador",
+      "login.password": "Palavra-passe",
+  
+      "html.title.login": "Página inicial",
+      "html.title.school_not_found": "Escola não encontrada",
+  
+      "login.password_lost.link": "Esqueceu-se da palavra-passe?",
+      "login.not_active": "<b>Obrigado pelo seu registo!</b><br><br>Para concluir a ativação da sua conta, enviámos um e-mail com uma ligação de ativação para a sua caixa de correio.<br><br>Clique na ligação no e-mail ou introduza o código de ativação no campo abaixo.",
+  
+      "login.activation_link.resend": "Reenviar e-mail de ativação",
+  
+      "password_lost": "Recuperação de palavra-passe",
+      "password_lost.identifier.desc": "Introduza o seu nome de utilizador e confirme. Receberá um e-mail para redefinir a sua palavra-passe.",
+      "password_lost.email_sent": "O e-mail para redefinir a palavra-passe foi enviado",
+  
+      "password_reset.title": "Definir nova palavra-passe",
+      "login.password.confirmation": "Confirmação da palavra-passe",
+      "password_reset.need_password": "Vui lòng nhập mật khẩu.",
+      "password_reset.passwords_must_match": "As palavras-passe devem ser idênticas.",
+      "password_reset.success": "A palavra-passe foi atualizada com sucesso!",
+      "password_reset.confirmation.desc": "Foi-lhe enviado um e-mail.<br><br>Introduza o <b>código de redefinição recebido por e-mail</b> para criar uma nova palavra-passe.<br><br>O e-mail também contém uma ligação direta para a página de redefinição.",
+      "password_reset.code": "Código de redefinição",
+      "password_reset.need_code": "Deve introduzir o código",
+      "password_reset.code.hint": "Introduza o código…",
+  
+      "school.activation_code": "Código de ativação",
+      "school.activation_code.hint": "Introduza o código…",
+      "school.activate.need_code": "Deve introduzir o código de ativação.",
+      "school.activate.success": "Parabéns! A sua escola foi ativada.<br>Já pode iniciar sessão agora mesmo.",
+      "school.activate.email_resent": "O e-mail de ativação foi reenviado!",
+  
+      "school_not_found.headline": "Ups… Parece que esta escola não existe!",
+      "school_not_found.info": "Se considera que se trata de um erro da nossa parte, contacte-nos através de <a class=\"a\" href=\"mailto:contact@omniscol.com?subject=A%20minha%20escola%20não%20existe\">contact@omniscol.com</a>",
+  
+      "go_to_homepage": "Ir para a página inicial",
+  
+      "error.password.format": "A palavra-passe deve conter entre {min} e {max} caracteres",
+      "error.login.bad_credentials": "Nome de utilizador ou palavra-passe incorretos",
+      "error.login.not_found": "O nome de utilizador não existe",
+      "error.password_reset.not_found": "Código inválido ou não existe nenhum pedido de redefinição de palavra-passe em curso",
+  
+      "loading.please_wait": "A carregar…",
+  
+      "error.core.ajax": "Erro ao ligar ao servidor",
+      "error.server": "Ocorreu um erro no servidor.<br><br>A equipa Omniscol já foi informada e está a resolver o problema o mais rapidamente possível.",
+  
+      "newschool.title": "Criação da sua escola",
+      "newschool.change_domain.help": "Este nome de domínio já está a ser utilizado. Entre o seu pedido e a validação, outra escola poderá ter registado o mesmo domínio. Escolha outro nome de domínio e será redirecionado para uma nova página de criação de conta.",
+  
+      "try.domain.hint": "minhaescola",
+      "try.domain.desc": "Utilizado para aceder à sua escola (ex.: \"minhaescola\" será acessível em minhaescola.omniscol.com)",
+      "try.domain.available": "Disponível",
+      "try.domain.unavailable": "Indisponível",
+      "try.domain.checking": "A verificar disponibilidade",
+      "error.school.domain.existing": "Este domínio já está a ser utilizado",
+  
+      "action.cancel": "Cancelar",
+  
+      "try.domain.format": "O domínio deve conter entre 4 e 30 caracteres (letras minúsculas, números, \"-\" ou \"_\") e começar por uma letra ou um número.",
+  
+      "error.javascript.catched": "Ocorreu um erro de JavaScript nesta página. Isto pode afetar algumas funcionalidades. A equipa Omniscol já foi informada e está a trabalhar na resolução do problema.",
+  
+      "language": "Idioma",
+  
+      "account.warning.demo": "Conta de demonstração",
+      "account.warning.renewlicense": "<a href=\"mailto:contact@omniscol.com\">Contacte a equipa Omniscol</a> para renovar a sua licença!",
+      "account.warning.alert": "A sua licença está prestes a expirar!",
+      "account.warning.readonly": "A sua licença expirou! Esta conta encontra-se em modo apenas de leitura.",
+      "account.warning.disabled": "A sua licença expirou! Esta conta foi desativada.",
+  
+      "password_lost.error": "O seu pedido não foi bem-sucedido. Por favor, tente novamente ou contacte o administrador.",
+  
+      "access.oauth2.scope.read.basic": "Ler informações básicas",
+      "access.oauth2.scope.read.user": "Ler informações dos utilizadores",
+      "access.oauth2.scope.write.data": "Escrever dados",
+      "access.oauth2.scope.admin": "Aceder às funções de administração",
+  
+      "action.deny": "Recusar",
+      "action.accept": "Aceitar",
+  
+      "access.authorization.requested": "Autorização necessária",
+      "access.oauth2.app_access_account": "A aplicação {client_name} solicita acesso à sua conta",
+      "access.oauth2.scopes": "A sua conta será utilizada, dentro dos limites das suas permissões de acesso, para:",
+      "error.login.restricted": "A sua conta não tem as permissões necessárias para aceder a esta aplicação.",
+  
+      "or": "ou",
+      "login.sso.with": "Iniciar sessão com {provider}"
+    },
+    "pluralrule": 2,
+    "reqtime": 39
+  }

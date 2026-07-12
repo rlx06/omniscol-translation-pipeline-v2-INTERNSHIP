@@ -1,0 +1,148 @@
+{
+  "_comment": "Concept glossary for the Omniscol semantic translation pipeline (V2). Built from data/source/Glossary.md plus confirmed French terms found in data/source/fr_webapp.json. Each concept lists surface forms per language and the confusions that must never collapse together.",
+
+  "teacher": {
+    "fr_forms": ["professeur", "professeurs", "enseignant"],
+    "en_forms": ["teacher", "teachers"],
+    "pl_forms": ["nauczyciel", "nauczyciele", "nauczyciela"],
+    "meaning": "A teacher user/role, distinct from generic staff and from 'head teacher' (role.main_teacher)",
+    "domains": ["role", "teacher", "sched"],
+    "forbidden_confusions": ["staff", "student", "main_teacher_role"]
+  },
+  "head_teacher": {
+    "fr_forms": ["professeur principal"],
+    "en_forms": ["head teacher", "class tutor"],
+    "pl_forms": ["wychowawca"],
+    "meaning": "role.main_teacher: the homeroom/class tutor, NOT the school's head/director",
+    "domains": ["role"],
+    "forbidden_confusions": ["director", "teacher"]
+  },
+  "student": {
+    "fr_forms": ["eleve", "eleves", "etudiant"],
+    "en_forms": ["student", "students"],
+    "pl_forms": ["uczen", "uczniowie", "ucznia"],
+    "meaning": "A learner enrolled in a class",
+    "domains": ["role", "class", "group"],
+    "forbidden_confusions": ["teacher"]
+  },
+  "class": {
+    "fr_forms": ["classe", "classes"],
+    "en_forms": ["class", "classes"],
+    "pl_forms": ["klasa", "klasy"],
+    "meaning": "The overall student cohort/grade grouping (class.*), distinct from a single scheduled lesson (sched.course.*) and from a sub-group (group.*)",
+    "domains": ["class"],
+    "forbidden_confusions": ["lesson", "group"]
+  },
+  "lesson": {
+    "fr_forms": ["cours"],
+    "en_forms": ["lesson", "course"],
+    "pl_forms": ["lekcja", "zajecia"],
+    "meaning": "sched.course.*: a single scheduled teaching session/slot, distinct from the 'class' cohort and from 'subject'",
+    "domains": ["sched"],
+    "forbidden_confusions": ["class", "subject"]
+  },
+  "subject": {
+    "fr_forms": ["matiere", "matieres", "discipline"],
+    "en_forms": ["subject", "subjects"],
+    "pl_forms": ["przedmiot", "przedmioty"],
+    "meaning": "subject.*: the academic discipline (e.g. Maths), distinct from a scheduled lesson",
+    "domains": ["subject", "teacher.subjects"],
+    "forbidden_confusions": ["lesson"]
+  },
+  "group": {
+    "fr_forms": ["groupe", "groupes"],
+    "en_forms": ["group", "groups"],
+    "pl_forms": ["grupa", "grupy"],
+    "meaning": "group.*: a subdivision used to split or align students within/across classes, distinct from the whole 'class'",
+    "domains": ["group", "sched.course.assign_group"],
+    "forbidden_confusions": ["class"]
+  },
+  "classroom": {
+    "fr_forms": ["salle", "salles"],
+    "en_forms": ["classroom", "room"],
+    "pl_forms": ["sala", "sale"],
+    "meaning": "classroom.*: a physical room resource, distinct from the broader 'resource' concept",
+    "domains": ["classroom"],
+    "forbidden_confusions": ["resource"]
+  },
+  "resource": {
+    "fr_forms": ["ressource", "ressources"],
+    "en_forms": ["resource", "resources"],
+    "pl_forms": ["zasob", "zasoby"],
+    "meaning": "Any schedulable resource (equipment, room, staffing) - broader than 'classroom'; e.g. sched.course.assign_resources",
+    "domains": ["sched"],
+    "forbidden_confusions": ["classroom"]
+  },
+  "absence": {
+    "fr_forms": ["absence", "absences"],
+    "en_forms": ["absence", "absences"],
+    "pl_forms": ["nieobecnosc", "nieobecnosci"],
+    "meaning": "absence.*: a recorded non-attendance event, distinct from a scheduling 'conflict'",
+    "domains": ["absence"],
+    "forbidden_confusions": ["conflict"]
+  },
+  "conflict": {
+    "fr_forms": ["conflit", "conflits"],
+    "en_forms": ["conflict", "conflicts"],
+    "pl_forms": ["konflikt", "konflikty"],
+    "meaning": "A scheduling collision between two resources/entities in the generated timetable",
+    "domains": ["sched", "diagnose"],
+    "forbidden_confusions": ["absence"]
+  },
+  "preferences": {
+    "fr_forms": ["voeux", "souhaits"],
+    "en_forms": ["wishes", "preferences"],
+    "pl_forms": ["preferencje", "zyczenia"],
+    "meaning": "teacher.wishes.*: stated, non-binding scheduling wishes of a teacher",
+    "domains": ["teacher.wishes", "wishes"],
+    "forbidden_confusions": []
+  },
+  "hours_distribution": {
+    "fr_forms": ["heures reparties", "heures assignees", "repartition des heures"],
+    "en_forms": ["hours distribution", "assigned hours"],
+    "pl_forms": ["rozklad godzin", "godziny przydzielone"],
+    "meaning": "teacher.assignedhours / teacher.distributedhours: allocation of teaching hours",
+    "domains": ["teacher"],
+    "forbidden_confusions": []
+  },
+  "partition": {
+    "fr_forms": ["groupe en partition"],
+    "en_forms": ["partitioned group", "split group"],
+    "pl_forms": ["grupa podzielona"],
+    "meaning": "group.timeset: a group defined by splitting a class into a time-based partition",
+    "domains": ["group.timeset"],
+    "forbidden_confusions": ["alignment", "group_of_groups"]
+  },
+  "alignment": {
+    "fr_forms": ["groupe aligne"],
+    "en_forms": ["aligned group"],
+    "pl_forms": ["grupa wyrownana"],
+    "meaning": "group.spaceset: a group synchronised in time with another so students can move between sessions",
+    "domains": ["group.spaceset"],
+    "forbidden_confusions": ["partition"]
+  },
+  "activate": {
+    "fr_forms": ["activer"],
+    "en_forms": ["activate"],
+    "pl_forms": ["aktywuj"],
+    "meaning": "action.activate: turn an account/feature ON from a disabled/inactive lifecycle state (e.g. activating a new user account)",
+    "domains": ["action.activate"],
+    "forbidden_confusions": ["enable"]
+  },
+  "enable": {
+    "fr_forms": ["activer"],
+    "en_forms": ["enable"],
+    "pl_forms": ["wlacz"],
+    "meaning": "action.enable: toggle an already-existing feature/setting on, distinct lifecycle stage from account 'activation'. Currently mistranslated identically to 'activate' in Polish (both -> 'Aktywuj') - flagged by the audit.",
+    "domains": ["action.enable"],
+    "forbidden_confusions": ["activate"]
+  },
+  "director": {
+    "fr_forms": ["directeur"],
+    "en_forms": ["director"],
+    "pl_forms": ["dyrektor"],
+    "meaning": "role.director: the school's head/director, NOT the 'head teacher' (professeur principal / class tutor)",
+    "domains": ["role"],
+    "forbidden_confusions": ["head_teacher"]
+  }
+}
