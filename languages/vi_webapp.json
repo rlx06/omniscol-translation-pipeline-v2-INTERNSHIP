@@ -1221,7 +1221,6 @@
     "sched.course.status.planned": "Đã lên kế hoạch",
     "sched.course.status.draft": "Bản nháp",
     "sched.course.status.canceled": "Đã hủy",
-    "sched.course.status.done": "Đã thực hiện",
-    "translations": "Dịch thuật"
+    "sched.course.status.done": "Đã thực hiện"
   }
 }

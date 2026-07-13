@@ -1,4 +1,5 @@
 {
+  "success": true,
   "translations": {
     "action.login": "Anmelden",
     "action.reset": "Rücksetzen",
@@ -1222,17 +1223,8 @@
     "sched.course.status.planned": "Geplant",
     "sched.course.status.draft": "Entwurf",
     "sched.course.status.canceled": "Abgesagt",
-    "sched.course.status.done": "Durchgeführt",
-    "absence.reason.unauthorized": "Nicht genehmigte Abwesenheit",
-    "absence.reason.authorized": "Genehmigte Abwesenheit",
-    "action.visualize": "Anzeigen",
-    "action.reorganize": "Neu organisieren",
-    "admin.parameters.namecapitalize": "Großschreibung von Personennamen",
-    "admin.parameters.namecapitalize.info": "Sie können wählen, ob alle oder Teile der Namen von Personen in Großbuchstaben angezeigt werden sollen (Name, Vorname und ggf. zweiter Vorname), sofern die Schrift dies zulässt.",
-    "error.upload.size_exceeded": "Max. Größe überschritten",
-    "sched.distribution.cant_resize_timeslot": "Sie können die Zeit einer im Stundenplan festgelegten Lektion nicht ändern. Wenn Sie die Dauer dieser Lektion ändern möchten, entfernen Sie sie aus dem Stundenplan.",
-    "sched.view_reorganize": "Ansicht: Neuorganisation der Wochenlektionen",
-    "size": "Größe",
-    "home.define.sujects": "Benutzerdefinierte Fächer erstellen"
-  }
+    "sched.course.status.done": "Durchgeführt"
+  },
+  "pluralrule": 2,
+  "reqtime": 37
 }

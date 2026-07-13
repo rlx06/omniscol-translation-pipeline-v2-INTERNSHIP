@@ -147,7 +147,8 @@ venv.bak/
 *.pyc
 .env
 languages/*_backup.json
-reports/chunk_*.mdlogs/
+reports/chunk_*.md
+logs/
 
 
 # Spyder project settings
@@ -211,3 +212,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Omniscol V2 pipeline - generated artifacts, not source
+memory/
+*.bak
+reports/v2/*.v2.json
+reports/v2/*.diff.md
+reports/v2/*.review_queue.md
+reports/v2/*.validation.json
+reports/v2/*.summary.md
+reports/v2/*.synced_mock.json
+reports/v2/*.audit_v2.md
+logs/*.log

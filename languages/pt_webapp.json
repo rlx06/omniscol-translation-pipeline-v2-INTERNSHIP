@@ -1221,7 +1221,6 @@
     "sched.course.status.planned": "Planeado",
     "sched.course.status.draft": "Rascunho",
     "sched.course.status.canceled": "Cancelado",
-    "sched.course.status.done": "Realizado",
-    "translations": "Traduções"
+    "sched.course.status.done": "Realizado"
   }
 }
