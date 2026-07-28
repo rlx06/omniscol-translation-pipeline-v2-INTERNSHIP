@@ -1,15 +1,93 @@
 {
-  "_comment": "Concept pairs that must never be translated identically. Derived from config/concepts.json 'forbidden_confusions' - kept as a flat lookup for the validator.",
+  "_comment": "Derived from Omniscol's official _synonyms.yaml notes and domain logic.",
   "pairs": [
-    ["activate", "enable"],
-    ["class", "lesson"],
-    ["class", "group"],
-    ["lesson", "subject"],
-    ["classroom", "resource"],
-    ["absence", "conflict"],
-    ["partition", "alignment"],
-    ["teacher", "student"],
-    ["teacher", "head_teacher"],
-    ["director", "head_teacher"]
+    [
+      "class",
+      "lesson"
+    ],
+    [
+      "class",
+      "course"
+    ],
+    [
+      "lesson",
+      "course"
+    ],
+    [
+      "class",
+      "group"
+    ],
+    [
+      "class-division",
+      "alignment"
+    ],
+    [
+      "teacher",
+      "student"
+    ],
+    [
+      "teacher",
+      "staff"
+    ],
+    [
+      "teacher",
+      "external-teacher"
+    ],
+    [
+      "teacher",
+      "permanent-teacher"
+    ],
+    [
+      "external-teacher",
+      "permanent-teacher"
+    ],
+    [
+      "absence",
+      "conflict"
+    ],
+    [
+      "resource",
+      "classroom"
+    ],
+    [
+      "site",
+      "classroom"
+    ],
+    [
+      "course-of-study",
+      "course"
+    ],
+    [
+      "course-of-study",
+      "lesson"
+    ],
+    [
+      "constraint",
+      "wishes"
+    ],
+    [
+      "group",
+      "groups-of-groups"
+    ],
+    [
+      "group",
+      "class-division"
+    ],
+    [
+      "group",
+      "alignment"
+    ],
+    [
+      "data-import",
+      "data-export"
+    ],
+    [
+      "admin-user",
+      "staff"
+    ],
+    [
+      "activate",
+      "enable"
+    ]
   ]
 }

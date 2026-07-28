@@ -1,148 +1,6169 @@
 {
-  "_comment": "Concept glossary for the Omniscol semantic translation pipeline (V2). Built from data/source/Glossary.md plus confirmed French terms found in data/source/fr_webapp.json. Each concept lists surface forms per language and the confusions that must never collapse together.",
-
-  "teacher": {
-    "fr_forms": ["professeur", "professeurs", "enseignant"],
-    "en_forms": ["teacher", "teachers"],
-    "pl_forms": ["nauczyciel", "nauczyciele", "nauczyciela"],
-    "meaning": "A teacher user/role, distinct from generic staff and from 'head teacher' (role.main_teacher)",
-    "domains": ["role", "teacher", "sched"],
-    "forbidden_confusions": ["staff", "student", "main_teacher_role"]
+  "timetable": {
+    "fr_forms": [
+      "emploi du temps",
+      "edt",
+      "planning",
+      "planning hebdomadaire",
+      "planning de cours",
+      "agenda de cours"
+    ],
+    "en_forms": [
+      "timetable",
+      "schedule",
+      "weekly schedule",
+      "course schedule"
+    ],
+    "de_forms": [
+      "stundenplan",
+      "stundenpläne",
+      "stundenplanung",
+      "wochenplan",
+      "kursplan",
+      "plan"
+    ],
+    "es_forms": [
+      "horario",
+      "horarios",
+      "horario semanal",
+      "horario de clases",
+      "planificación horaria"
+    ],
+    "it_forms": [
+      "orario",
+      "orario scolastico",
+      "orario delle lezioni",
+      "orario settimanale"
+    ],
+    "pt_forms": [
+      "horário",
+      "horários",
+      "horário escolar",
+      "horário letivo",
+      "grade horária",
+      "quadro de horários",
+      "planejamento de aulas"
+    ],
+    "nl_forms": [
+      "rooster",
+      "lesrooster",
+      "schoolrooster",
+      "roosters",
+      "weekrooster",
+      "planning"
+    ],
+    "pl_forms": [
+      "plan lekcji",
+      "plan zajęć",
+      "plany lekcji",
+      "rozkład zajęć",
+      "harmonogram",
+      "plan tygodniowy"
+    ],
+    "ru_forms": [
+      "расписание",
+      "расписание занятий",
+      "учебное расписание",
+      "недельное расписание",
+      "сетка расписания"
+    ],
+    "ar_forms": [
+      "الجدول الزمني",
+      "جدول الحصص",
+      "جدول الدروس",
+      "الجدول الأسبوعي",
+      "جدول زمني",
+      "جداول زمنية"
+    ],
+    "he_forms": [
+      "מערכת שעות",
+      "מערכות שעות",
+      "מערכת",
+      "לוז",
+      "לוח זמנים",
+      "מערכת שעות שבועית",
+      "תכנון שבועי"
+    ],
+    "vi_forms": [
+      "thời khóa biểu",
+      "thời khoá biểu",
+      "tkb",
+      "lịch học",
+      "lịch học hàng tuần"
+    ],
+    "kz_forms": [
+      "кесте",
+      "сабақ кестесі",
+      "мектеп кестесі",
+      "оқу кестесі",
+      "апталық кесте",
+      "кестелер"
+    ],
+    "zh_forms": [
+      "课表",
+      "课程表",
+      "时间表",
+      "排课表",
+      "课表管理",
+      "总课表"
+    ],
+    "meaning": "Omniscol domain concept: timetable",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
   },
-  "head_teacher": {
-    "fr_forms": ["professeur principal"],
-    "en_forms": ["head teacher", "class tutor"],
-    "pl_forms": ["wychowawca"],
-    "meaning": "role.main_teacher: the homeroom/class tutor, NOT the school's head/director",
-    "domains": ["role"],
-    "forbidden_confusions": ["director", "teacher"]
+  "schedule-view": {
+    "fr_forms": [
+      "planning",
+      "vue planning",
+      "vue calendrier",
+      "agenda",
+      "vue agenda"
+    ],
+    "en_forms": [
+      "schedule",
+      "calendar view",
+      "agenda"
+    ],
+    "de_forms": [
+      "stundenplanansicht",
+      "kalenderansicht",
+      "wochenansicht",
+      "kalender",
+      "terminplan"
+    ],
+    "es_forms": [
+      "vista de calendario",
+      "calendario",
+      "agenda",
+      "vista de horario",
+      "vista de cuadrícula"
+    ],
+    "it_forms": [
+      "vista calendario",
+      "calendario",
+      "agenda",
+      "vista orario"
+    ],
+    "pt_forms": [
+      "agenda",
+      "vista de agenda",
+      "vista de calendário",
+      "calendário",
+      "visualização do horário"
+    ],
+    "nl_forms": [
+      "roosterweergave",
+      "agenda",
+      "agendaweergave",
+      "kalenderweergave",
+      "planning",
+      "weergave"
+    ],
+    "pl_forms": [
+      "widok planu",
+      "kalendarz",
+      "widok kalendarza",
+      "agenda",
+      "podgląd planu"
+    ],
+    "ru_forms": [
+      "вид расписания",
+      "календарь",
+      "календарный вид",
+      "просмотр расписания",
+      "сетка занятий"
+    ],
+    "ar_forms": [
+      "عرض الجدول",
+      "عرض التقويم",
+      "الأجندة",
+      "التقويم",
+      "عرض الحصص اليومية"
+    ],
+    "he_forms": [
+      "תצוגת מערכת שעות",
+      "יומן",
+      "תצוגת יומן",
+      "לוח שנה",
+      "תצוגת לוח שנה"
+    ],
+    "vi_forms": [
+      "lịch",
+      "xem lịch",
+      "chế độ xem lịch",
+      "lịch biểu"
+    ],
+    "kz_forms": [
+      "кесте көрінісі",
+      "күнтізбе көрінісі",
+      "апта көрінісі",
+      "күнтізбе"
+    ],
+    "zh_forms": [
+      "日程",
+      "日程表",
+      "日历视图",
+      "日程视图",
+      "课程安排",
+      "日历"
+    ],
+    "meaning": "Omniscol domain concept: schedule-view",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
   },
-  "student": {
-    "fr_forms": ["eleve", "eleves", "etudiant"],
-    "en_forms": ["student", "students"],
-    "pl_forms": ["uczen", "uczniowie", "ucznia"],
-    "meaning": "A learner enrolled in a class",
-    "domains": ["role", "class", "group"],
-    "forbidden_confusions": ["teacher"]
-  },
-  "class": {
-    "fr_forms": ["classe", "classes"],
-    "en_forms": ["class", "classes"],
-    "pl_forms": ["klasa", "klasy"],
-    "meaning": "The overall student cohort/grade grouping (class.*), distinct from a single scheduled lesson (sched.course.*) and from a sub-group (group.*)",
-    "domains": ["class"],
-    "forbidden_confusions": ["lesson", "group"]
+  "timeline": {
+    "fr_forms": [
+      "ligne de temps",
+      "banderole",
+      "banderole de semaines",
+      "barre de navigation temporelle"
+    ],
+    "en_forms": [
+      "timeline",
+      "time navigation strip",
+      "time bar"
+    ],
+    "de_forms": [
+      "zeitleiste",
+      "zeitleisten",
+      "zeitnavigationsleiste",
+      "navigationsleiste"
+    ],
+    "es_forms": [
+      "línea de tiempo",
+      "barra de navegación temporal",
+      "barra de tiempo",
+      "franja temporal"
+    ],
+    "it_forms": [
+      "linea del tempo",
+      "barra di navigazione temporale",
+      "barra temporale",
+      "fascia temporale"
+    ],
+    "pt_forms": [
+      "linha do tempo",
+      "barra de navegação temporal",
+      "barra de tempo",
+      "faixa temporal"
+    ],
+    "nl_forms": [
+      "tijdlijn",
+      "tijdlijnen",
+      "tijdnavigatiebalk",
+      "navigatiebalk tijd"
+    ],
+    "pl_forms": [
+      "oś czasu",
+      "pasek nawigacji czasowej",
+      "pasek czasu",
+      "linia czasu"
+    ],
+    "ru_forms": [
+      "шкала времени",
+      "временная шкала",
+      "панель навигации по времени",
+      "полоса времени"
+    ],
+    "ar_forms": [
+      "شريط الوقت",
+      "شريط التنقل الزمني",
+      "الخط الزمني",
+      "شريط زمني"
+    ],
+    "he_forms": [
+      "ציר הזמן",
+      "ציר זמן",
+      "סרגל ניווט בזמן",
+      "פס זמן"
+    ],
+    "vi_forms": [
+      "dải thời gian",
+      "thanh điều hướng thời gian",
+      "thanh thời gian",
+      "trục thời gian"
+    ],
+    "kz_forms": [
+      "уақыт жолағы",
+      "уақыт шкаласы",
+      "уақыт навигация жолағы",
+      "уақыт панелі"
+    ],
+    "zh_forms": [
+      "时间轴",
+      "时间导航条",
+      "时间条",
+      "时间栏"
+    ],
+    "meaning": "\"Ligne de temps\" est le terme canonique pour la bande horizontale de navigation temporelle en haut des écrans de planning et de statistiques. \"Banderole\" et \"banderole de semaines\" sont les synonymes familiers, rétrogradés au profit du terme canonique.",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
   },
   "lesson": {
-    "fr_forms": ["cours"],
-    "en_forms": ["lesson", "course"],
-    "pl_forms": ["lekcja", "zajecia"],
-    "meaning": "sched.course.*: a single scheduled teaching session/slot, distinct from the 'class' cohort and from 'subject'",
-    "domains": ["sched"],
-    "forbidden_confusions": ["class", "subject"]
+    "fr_forms": [
+      "cours",
+      "leçon",
+      "séance",
+      "intervention",
+      "créneau",
+      "créneau de cours",
+      "vacation"
+    ],
+    "en_forms": [
+      "lesson",
+      "class period",
+      "session",
+      "slot"
+    ],
+    "de_forms": [
+      "unterrichtsstunde",
+      "unterrichtsstunden",
+      "stunde",
+      "lektion",
+      "unterricht",
+      "sitzung",
+      "lehrveranstaltung"
+    ],
+    "es_forms": [
+      "sesión",
+      "sesiones",
+      "clase",
+      "clases",
+      "franja horaria",
+      "hora de clase"
+    ],
+    "it_forms": [
+      "lezione",
+      "lezioni",
+      "ora di lezione",
+      "sessione",
+      "fascia oraria"
+    ],
+    "pt_forms": [
+      "aula",
+      "aulas",
+      "sessão",
+      "tempo letivo",
+      "período de aula",
+      "horário letivo"
+    ],
+    "nl_forms": [
+      "les",
+      "lessen",
+      "lesuur",
+      "tijdslot",
+      "lesblok",
+      "sessie",
+      "college"
+    ],
+    "pl_forms": [
+      "lekcja",
+      "lekcje",
+      "zajęcia",
+      "godzina lekcyjna",
+      "zajęcia lekcyjne"
+    ],
+    "ru_forms": [
+      "занятие",
+      "урок",
+      "пара",
+      "временной слот",
+      "слот",
+      "сеанс"
+    ],
+    "ar_forms": [
+      "حصة",
+      "حصص",
+      "درس",
+      "دروس",
+      "خانة",
+      "جلسة"
+    ],
+    "he_forms": [
+      "שיעור",
+      "שיעורים",
+      "שעת לימוד",
+      "משבצת",
+      "משבצת זמן",
+      "מפגש"
+    ],
+    "vi_forms": [
+      "tiết học",
+      "tiết",
+      "buổi học",
+      "giờ học",
+      "tiết dạy"
+    ],
+    "kz_forms": [
+      "сабақ",
+      "сабақтар",
+      "сабақ уақыты",
+      "уақыт аралығы",
+      "сабақ мерзімі"
+    ],
+    "zh_forms": [
+      "课时",
+      "课",
+      "一节课",
+      "上课",
+      "节次",
+      "时段"
+    ],
+    "meaning": "\"Cours\" est le terme générique en France ; au quotidien il désigne souvent la séance (l'unité posée sur la grille). \"Séance\" est plus courant dans le supérieur (y compris formation continue). \"Intervention\" est le terme usuel du supérieur pour une séance assurée par un intervenant (usage repris par les ERP Auriga et Aurion). \"Vacation\" désigne une séance assurée par un intervenant vacataire (pas u",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "class",
+      "course",
+      "course-of-study"
+    ]
   },
-  "subject": {
-    "fr_forms": ["matiere", "matieres", "discipline"],
-    "en_forms": ["subject", "subjects"],
-    "pl_forms": ["przedmiot", "przedmioty"],
-    "meaning": "subject.*: the academic discipline (e.g. Maths), distinct from a scheduled lesson",
-    "domains": ["subject", "teacher.subjects"],
-    "forbidden_confusions": ["lesson"]
+  "course": {
+    "fr_forms": [
+      "matière de classe",
+      "cours d'une classe",
+      "cours de la classe",
+      "ligne de cours"
+    ],
+    "en_forms": [
+      "course",
+      "class course"
+    ],
+    "de_forms": [
+      "kurs",
+      "kurse",
+      "klassenkurs",
+      "kurs der klasse",
+      "kurslinie"
+    ],
+    "es_forms": [
+      "curso de la clase",
+      "curso",
+      "asignatura de la clase",
+      "línea de curso",
+      "carga de asignatura"
+    ],
+    "it_forms": [
+      "corso",
+      "corso della classe",
+      "corso di una classe",
+      "riga di corso",
+      "materia di classe"
+    ],
+    "pt_forms": [
+      "curso",
+      "cursos",
+      "curso da turma",
+      "linha de curso",
+      "disciplina da turma"
+    ],
+    "nl_forms": [
+      "cursus",
+      "cursussen",
+      "vakregel",
+      "klasvak",
+      "cursus van de klas"
+    ],
+    "pl_forms": [
+      "kurs",
+      "kursy",
+      "kurs klasy",
+      "przedmiot klasy",
+      "linia kursu"
+    ],
+    "ru_forms": [
+      "курс",
+      "курс класса",
+      "учебный курс",
+      "строка курса",
+      "курс по дисциплине"
+    ],
+    "ar_forms": [
+      "مقرر",
+      "مقررات",
+      "مقرر الصف",
+      "مادة الصف",
+      "سطر المقرر"
+    ],
+    "he_forms": [
+      "קורס",
+      "קורסים",
+      "קורס של כיתה",
+      "מקצוע של כיתה",
+      "שורת קורס",
+      "מקצוע בכיתה"
+    ],
+    "vi_forms": [
+      "khóa học",
+      "khoá học",
+      "môn của lớp",
+      "khóa học của lớp",
+      "dòng khóa học"
+    ],
+    "kz_forms": [
+      "курс",
+      "курстар",
+      "сынып курсы",
+      "сынып пәні",
+      "сынып-пән",
+      "оқу жүктемесі"
+    ],
+    "zh_forms": [
+      "课程",
+      "班级课程",
+      "课程行",
+      "班级科目",
+      "课程设置"
+    ],
+    "meaning": "Le \"cours\" au sens de la définition pédagogique : une matière (éventuellement typée CM/TD/TP) affectée à une classe, avec volume horaire, professeurs et contraintes. À distinguer de la \"séance\" (cluster `lesson`, l'occurrence posée sur la grille) et de la \"matière\" (cluster `course-of-study`, la discipline). L'ensemble des cours forme le programme / la maquette (cluster `program`).",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "class",
+      "lesson",
+      "course-of-study"
+    ]
+  },
+  "lesson-types": {
+    "fr_forms": [
+      "type de cours",
+      "td",
+      "tp",
+      "cm",
+      "magistral",
+      "travaux dirigés",
+      "travaux pratiques",
+      "examen",
+      "devoir surveillé"
+    ],
+    "en_forms": [
+      "lesson type",
+      "lecture",
+      "tutorial",
+      "lab",
+      "exam"
+    ],
+    "de_forms": [
+      "unterrichtstyp",
+      "unterrichtsart",
+      "vorlesung",
+      "übung",
+      "praktikum",
+      "prüfung",
+      "seminar",
+      "klausur"
+    ],
+    "es_forms": [
+      "tipo de sesión",
+      "tipo de clase",
+      "clase magistral",
+      "prácticas",
+      "tutoría",
+      "seminario",
+      "examen"
+    ],
+    "it_forms": [
+      "tipo di lezione",
+      "lezione frontale",
+      "esercitazione",
+      "laboratorio",
+      "esame",
+      "esercitazioni pratiche"
+    ],
+    "pt_forms": [
+      "tipo de aula",
+      "tipos de aula",
+      "aula teórica",
+      "aula prática",
+      "laboratório",
+      "prova",
+      "exame",
+      "seminário"
+    ],
+    "nl_forms": [
+      "lestype",
+      "lestypes",
+      "hoorcollege",
+      "werkcollege",
+      "practicum",
+      "examen",
+      "soort les"
+    ],
+    "pl_forms": [
+      "typ lekcji",
+      "wykład",
+      "ćwiczenia",
+      "laboratorium",
+      "egzamin",
+      "zajęcia praktyczne"
+    ],
+    "ru_forms": [
+      "тип занятия",
+      "лекция",
+      "практическое занятие",
+      "семинар",
+      "лабораторная работа",
+      "экзамен",
+      "контрольная работа"
+    ],
+    "ar_forms": [
+      "نوع الحصة",
+      "محاضرة",
+      "درس نظري",
+      "أعمال موجهة",
+      "أعمال تطبيقية",
+      "تطبيق عملي",
+      "امتحان",
+      "اختبار"
+    ],
+    "he_forms": [
+      "סוג שיעור",
+      "סוגי שיעור",
+      "הרצאה",
+      "תרגול",
+      "תרגיל",
+      "מעבדה",
+      "בחינה",
+      "מבחן"
+    ],
+    "vi_forms": [
+      "loại tiết học",
+      "loại buổi học",
+      "lý thuyết",
+      "bài tập",
+      "thực hành",
+      "thi",
+      "kiểm tra"
+    ],
+    "kz_forms": [
+      "сабақ түрі",
+      "дәріс",
+      "практика",
+      "зертханалық жұмыс",
+      "емтихан",
+      "семинар"
+    ],
+    "zh_forms": [
+      "课时类型",
+      "课程类型",
+      "讲座",
+      "实验课",
+      "实践课",
+      "考试",
+      "讲授课"
+    ],
+    "meaning": "Omniscol domain concept: lesson-types",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "class": {
+    "fr_forms": [
+      "classe",
+      "promo",
+      "promotion",
+      "session",
+      "cohorte"
+    ],
+    "en_forms": [
+      "class",
+      "cohort",
+      "intake",
+      "section"
+    ],
+    "de_forms": [
+      "klasse",
+      "klassen",
+      "jahrgang",
+      "kohorte",
+      "stammgruppe"
+    ],
+    "es_forms": [
+      "clase",
+      "clases",
+      "grupo clase",
+      "promoción",
+      "cohorte"
+    ],
+    "it_forms": [
+      "classe",
+      "classi",
+      "sezione",
+      "coorte",
+      "gruppo classe"
+    ],
+    "pt_forms": [
+      "turma",
+      "turmas",
+      "classe",
+      "coorte",
+      "série"
+    ],
+    "nl_forms": [
+      "klas",
+      "klassen",
+      "cohort",
+      "jaargroep",
+      "lichting"
+    ],
+    "pl_forms": [
+      "klasa",
+      "klasy",
+      "rocznik",
+      "kohorta",
+      "grupa rocznikowa"
+    ],
+    "ru_forms": [
+      "класс",
+      "классы",
+      "группа учащихся",
+      "когорта",
+      "поток",
+      "параллель"
+    ],
+    "ar_forms": [
+      "صف",
+      "صفوف",
+      "فصل",
+      "شعبة",
+      "دفعة",
+      "فوج"
+    ],
+    "he_forms": [
+      "כיתה",
+      "כיתות",
+      "שכבה",
+      "מחזור",
+      "קבוצת מחזור",
+      "מגמה"
+    ],
+    "vi_forms": [
+      "lớp",
+      "lớp học",
+      "khóa",
+      "khoá",
+      "niên khóa"
+    ],
+    "kz_forms": [
+      "сынып",
+      "сыныптар",
+      "ағым",
+      "когорта"
+    ],
+    "zh_forms": [
+      "班级",
+      "班",
+      "年级",
+      "届",
+      "班次"
+    ],
+    "meaning": "Omniscol \"class\" = a fixed set of students who attend lessons together (a homeroom / year-group / cohort), NOT a single lesson, a course, or a teaching subject. Beware the English overloading: \"class\" colloquially also means a lesson (\"I have a class at 9am\" → that is a lesson/séance, see id: lesson) or a school subject (see id: course-of-study) — neither is meant here. A subdivision of a class is",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "lesson",
+      "course",
+      "group"
+    ]
   },
   "group": {
-    "fr_forms": ["groupe", "groupes"],
-    "en_forms": ["group", "groups"],
-    "pl_forms": ["grupa", "grupy"],
-    "meaning": "group.*: a subdivision used to split or align students within/across classes, distinct from the whole 'class'",
-    "domains": ["group", "sched.course.assign_group"],
-    "forbidden_confusions": ["class"]
+    "fr_forms": [
+      "groupe",
+      "sous-groupe",
+      "demi-groupe",
+      "groupe d'option",
+      "td-a",
+      "td-b"
+    ],
+    "en_forms": [
+      "group",
+      "subgroup",
+      "half-class",
+      "option group"
+    ],
+    "de_forms": [
+      "gruppe",
+      "gruppen",
+      "untergruppe",
+      "halbklasse",
+      "halbe klasse",
+      "wahlgruppe"
+    ],
+    "es_forms": [
+      "grupo",
+      "grupos",
+      "subgrupo",
+      "media clase",
+      "grupo de optativa"
+    ],
+    "it_forms": [
+      "gruppo",
+      "gruppi",
+      "sottogruppo",
+      "mezza classe",
+      "gruppo opzionale"
+    ],
+    "pt_forms": [
+      "grupo",
+      "grupos",
+      "subgrupo",
+      "meia turma",
+      "grupo de opção",
+      "subturma"
+    ],
+    "nl_forms": [
+      "groep",
+      "groepen",
+      "subgroep",
+      "halve klas",
+      "keuzegroep",
+      "niveaugroep"
+    ],
+    "pl_forms": [
+      "grupa",
+      "grupy",
+      "podgrupa",
+      "półklasa",
+      "grupa zajęciowa"
+    ],
+    "ru_forms": [
+      "группа",
+      "группы",
+      "подгруппа",
+      "полкласса",
+      "группа по выбору"
+    ],
+    "ar_forms": [
+      "مجموعة",
+      "مجموعات",
+      "مجموعة فرعية",
+      "نصف الصف",
+      "مجموعة اختيارية"
+    ],
+    "he_forms": [
+      "קבוצה",
+      "קבוצות",
+      "תת קבוצה",
+      "תת-קבוצה",
+      "חצי כיתה",
+      "קבוצת בחירה",
+      "חצאי כיתה"
+    ],
+    "vi_forms": [
+      "nhóm",
+      "phân nhóm",
+      "nhóm con",
+      "nửa lớp",
+      "nhóm tùy chọn"
+    ],
+    "kz_forms": [
+      "топ",
+      "топтар",
+      "кіші топ",
+      "жарты сынып",
+      "таңдау тобы",
+      "бөлімше"
+    ],
+    "zh_forms": [
+      "教学小组",
+      "小组",
+      "分组",
+      "半班",
+      "选修组",
+      "子组"
+    ],
+    "meaning": "Omniscol domain concept: group",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "class",
+      "groups-of-groups",
+      "class-division",
+      "alignment"
+    ]
   },
-  "classroom": {
-    "fr_forms": ["salle", "salles"],
-    "en_forms": ["classroom", "room"],
-    "pl_forms": ["sala", "sale"],
-    "meaning": "classroom.*: a physical room resource, distinct from the broader 'resource' concept",
-    "domains": ["classroom"],
-    "forbidden_confusions": ["resource"]
-  },
-  "resource": {
-    "fr_forms": ["ressource", "ressources"],
-    "en_forms": ["resource", "resources"],
-    "pl_forms": ["zasob", "zasoby"],
-    "meaning": "Any schedulable resource (equipment, room, staffing) - broader than 'classroom'; e.g. sched.course.assign_resources",
-    "domains": ["sched"],
-    "forbidden_confusions": ["classroom"]
-  },
-  "absence": {
-    "fr_forms": ["absence", "absences"],
-    "en_forms": ["absence", "absences"],
-    "pl_forms": ["nieobecnosc", "nieobecnosci"],
-    "meaning": "absence.*: a recorded non-attendance event, distinct from a scheduling 'conflict'",
-    "domains": ["absence"],
-    "forbidden_confusions": ["conflict"]
-  },
-  "conflict": {
-    "fr_forms": ["conflit", "conflits"],
-    "en_forms": ["conflict", "conflicts"],
-    "pl_forms": ["konflikt", "konflikty"],
-    "meaning": "A scheduling collision between two resources/entities in the generated timetable",
-    "domains": ["sched", "diagnose"],
-    "forbidden_confusions": ["absence"]
-  },
-  "preferences": {
-    "fr_forms": ["voeux", "souhaits"],
-    "en_forms": ["wishes", "preferences"],
-    "pl_forms": ["preferencje", "zyczenia"],
-    "meaning": "teacher.wishes.*: stated, non-binding scheduling wishes of a teacher",
-    "domains": ["teacher.wishes", "wishes"],
-    "forbidden_confusions": []
-  },
-  "hours_distribution": {
-    "fr_forms": ["heures reparties", "heures assignees", "repartition des heures"],
-    "en_forms": ["hours distribution", "assigned hours"],
-    "pl_forms": ["rozklad godzin", "godziny przydzielone"],
-    "meaning": "teacher.assignedhours / teacher.distributedhours: allocation of teaching hours",
-    "domains": ["teacher"],
-    "forbidden_confusions": []
-  },
-  "partition": {
-    "fr_forms": ["groupe en partition"],
-    "en_forms": ["partitioned group", "split group"],
-    "pl_forms": ["grupa podzielona"],
-    "meaning": "group.timeset: a group defined by splitting a class into a time-based partition",
-    "domains": ["group.timeset"],
-    "forbidden_confusions": ["alignment", "group_of_groups"]
+  "class-division": {
+    "fr_forms": [
+      "partition",
+      "partition de groupes",
+      "division"
+    ],
+    "en_forms": [
+      "class division",
+      "division",
+      "partition"
+    ],
+    "de_forms": [
+      "klassenteilung",
+      "klassenteilungen",
+      "teilung",
+      "gruppenteilung",
+      "aufteilung der klasse"
+    ],
+    "es_forms": [
+      "partición",
+      "particiones",
+      "partición de clase",
+      "división de clase",
+      "desdoblamiento"
+    ],
+    "it_forms": [
+      "partizione di classe",
+      "partizione",
+      "partizioni",
+      "divisione",
+      "suddivisione della classe"
+    ],
+    "pt_forms": [
+      "divisão de turma",
+      "divisão",
+      "partição",
+      "divisões",
+      "partições"
+    ],
+    "nl_forms": [
+      "klasverdeling",
+      "verdeling",
+      "partitie",
+      "groepsverdeling"
+    ],
+    "pl_forms": [
+      "podział klasy",
+      "podział",
+      "podział na grupy",
+      "podział grup"
+    ],
+    "ru_forms": [
+      "разделение класса",
+      "разделение",
+      "деление класса",
+      "разбиение",
+      "разбивка"
+    ],
+    "ar_forms": [
+      "تقسيم",
+      "تقسيم المجموعات",
+      "تقسيم الصف",
+      "تجزئة"
+    ],
+    "he_forms": [
+      "חלוקה",
+      "חלוקת קבוצות",
+      "חלוקת כיתה",
+      "פיצול כיתה",
+      "חלוקות",
+      "חלוקת שעות"
+    ],
+    "vi_forms": [
+      "phân vùng",
+      "phân chia lớp",
+      "phân chia nhóm",
+      "chia nhóm"
+    ],
+    "kz_forms": [
+      "сыныпты бөлу",
+      "сыныпты топтарға бөлу",
+      "топтарға бөлу",
+      "сыныпты бөлу тобы",
+      "бөліну"
+    ],
+    "zh_forms": [
+      "班内分组",
+      "同步分组",
+      "分组划分",
+      "划分",
+      "分区"
+    ],
+    "meaning": "Omniscol domain concept: class-division",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "alignment",
+      "group"
+    ]
   },
   "alignment": {
-    "fr_forms": ["groupe aligne"],
-    "en_forms": ["aligned group"],
-    "pl_forms": ["grupa wyrownana"],
-    "meaning": "group.spaceset: a group synchronised in time with another so students can move between sessions",
-    "domains": ["group.spaceset"],
-    "forbidden_confusions": ["partition"]
+    "fr_forms": [
+      "alignement",
+      "alignement de groupes",
+      "regroupement transversal"
+    ],
+    "en_forms": [
+      "alignment",
+      "group alignment",
+      "cross-class group"
+    ],
+    "de_forms": [
+      "gruppen-ausrichtung",
+      "gruppenausrichtung",
+      "ausrichtung",
+      "klassenübergreifende gruppe",
+      "parallelisierung"
+    ],
+    "es_forms": [
+      "alineación",
+      "alineaciones",
+      "alineación de grupos",
+      "grupo transversal",
+      "grupo entre clases"
+    ],
+    "it_forms": [
+      "allineamento",
+      "allineamenti",
+      "allineamento dei gruppi",
+      "gruppo trasversale",
+      "raggruppamento trasversale"
+    ],
+    "pt_forms": [
+      "alinhamento de grupos",
+      "alinhamento",
+      "alinhamentos",
+      "agrupamento transversal",
+      "grupos simultâneos"
+    ],
+    "nl_forms": [
+      "groepsuitlijning",
+      "uitlijning",
+      "klasoverstijgende groep",
+      "gekoppelde groepen"
+    ],
+    "pl_forms": [
+      "wyrównanie grup",
+      "wyrównanie",
+      "grupy międzyklasowe",
+      "wspólny termin grup"
+    ],
+    "ru_forms": [
+      "совмещение групп",
+      "совмещение",
+      "выравнивание групп",
+      "межклассовая группа",
+      "сводная группа"
+    ],
+    "ar_forms": [
+      "محاذاة",
+      "محاذاة المجموعات",
+      "محاذاة المجموعة",
+      "تجميع عرضي",
+      "مجموعة عبر الصفوف"
+    ],
+    "he_forms": [
+      "יישור קבוצות",
+      "יישור",
+      "יישורים",
+      "קבוצה חוצת כיתות",
+      "יישור בין כיתות"
+    ],
+    "vi_forms": [
+      "căn chỉnh nhóm",
+      "căn chỉnh",
+      "căn chỉnh nhóm liên lớp",
+      "nhóm liên kết"
+    ],
+    "kz_forms": [
+      "туралау",
+      "топтарды туралау",
+      "тураланған топ",
+      "сыныпаралық топ",
+      "ортақ сабақ"
+    ],
+    "zh_forms": [
+      "对齐",
+      "小组对齐",
+      "教学小组对齐",
+      "跨班对齐",
+      "跨班分组"
+    ],
+    "meaning": "Omniscol domain concept: alignment",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "class-division",
+      "group"
+    ]
   },
+  "transverse-course": {
+    "fr_forms": [
+      "cours transverse",
+      "cours transverses",
+      "cours mutualisé",
+      "cours commun",
+      "UE transversale",
+      "enseignement transversal"
+    ],
+    "en_forms": [
+      "transverse course",
+      "cross-program course",
+      "shared course",
+      "common core course"
+    ],
+    "de_forms": [
+      "übergreifender kurs",
+      "klassenübergreifender kurs",
+      "gemeinsamer kurs",
+      "geteilter kurs",
+      "gemeinschaftsfach"
+    ],
+    "es_forms": [
+      "curso transversal",
+      "cursos transversales",
+      "asignatura común",
+      "curso compartido",
+      "tronco común"
+    ],
+    "it_forms": [
+      "corso trasversale",
+      "corsi trasversali",
+      "corso condiviso",
+      "corso comune",
+      "insegnamento trasversale"
+    ],
+    "pt_forms": [
+      "curso transversal",
+      "cursos transversais",
+      "curso comum",
+      "curso compartilhado",
+      "disciplina comum",
+      "tronco comum"
+    ],
+    "nl_forms": [
+      "gedeelde cursus",
+      "gemeenschappelijke cursus",
+      "klasoverstijgende cursus",
+      "overkoepelende cursus",
+      "gemutualiseerde cursus"
+    ],
+    "pl_forms": [
+      "kurs wspólny",
+      "kurs międzykierunkowy",
+      "zajęcia wspólne",
+      "przedmiot wspólny",
+      "kurs współdzielony"
+    ],
+    "ru_forms": [
+      "общий курс",
+      "сквозной курс",
+      "межпрограммный курс",
+      "совместный курс",
+      "общая дисциплина",
+      "сквозная дисциплина"
+    ],
+    "ar_forms": [
+      "مقرر مشترك",
+      "مقرر عرضي",
+      "مادة مشتركة",
+      "مقرر متعدد البرامج",
+      "تدريس مشترك"
+    ],
+    "he_forms": [
+      "קורס משותף",
+      "קורס רוחבי",
+      "קורס מאוחד",
+      "מקצוע משותף",
+      "קורס חוצה תכניות",
+      "קורס ליבה משותף"
+    ],
+    "vi_forms": [
+      "khóa học liên ngành",
+      "khóa học chung",
+      "môn học chung",
+      "khóa học dùng chung",
+      "học phần liên ngành"
+    ],
+    "kz_forms": [
+      "ортақ курс",
+      "көлденең курс",
+      "бірлескен курс",
+      "ортақ пән"
+    ],
+    "zh_forms": [
+      "共享课程",
+      "跨班课程",
+      "公共课程",
+      "通识课程",
+      "共同课",
+      "跨专业课程"
+    ],
+    "meaning": "Omniscol domain concept: transverse-course",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "groups-of-groups": {
+    "fr_forms": [
+      "groupe de groupes",
+      "supergroupe",
+      "regroupement de groupes",
+      "regroupement"
+    ],
+    "en_forms": [
+      "group of groups",
+      "supergroup",
+      "group aggregation",
+      "aggregation"
+    ],
+    "de_forms": [
+      "gruppe von gruppen",
+      "gruppen von gruppen",
+      "gruppenverbund",
+      "übergruppe",
+      "sammelgruppe"
+    ],
+    "es_forms": [
+      "grupo de grupos",
+      "supergrupo",
+      "agrupación de grupos",
+      "agrupación",
+      "conjunto de grupos"
+    ],
+    "it_forms": [
+      "gruppo di gruppi",
+      "gruppi di gruppi",
+      "supergruppo",
+      "raggruppamento di gruppi",
+      "aggregazione di gruppi"
+    ],
+    "pt_forms": [
+      "grupo de grupos",
+      "grupos de grupos",
+      "supergrupo",
+      "agrupamento de grupos",
+      "agrupamento"
+    ],
+    "nl_forms": [
+      "groep van groepen",
+      "supergroep",
+      "samengestelde groep",
+      "groepering",
+      "groepencombinatie"
+    ],
+    "pl_forms": [
+      "grupa grup",
+      "supergrupa",
+      "łączenie grup",
+      "zgrupowanie grup"
+    ],
+    "ru_forms": [
+      "группа групп",
+      "объединение групп",
+      "супергруппа",
+      "укрупнённая группа",
+      "агрегированная группа"
+    ],
+    "ar_forms": [
+      "مجموعة المجموعات",
+      "مجموعة مجموعات",
+      "تجميع المجموعات",
+      "مجموعة كبرى",
+      "تجميع"
+    ],
+    "he_forms": [
+      "קבוצת קבוצות",
+      "קבוצות של קבוצות",
+      "על-קבוצה",
+      "סופר-קבוצה",
+      "איחוד קבוצות",
+      "קיבוץ קבוצות"
+    ],
+    "vi_forms": [
+      "nhóm của nhóm",
+      "nhóm các nhóm",
+      "nhóm của các nhóm",
+      "siêu nhóm",
+      "tập hợp nhóm"
+    ],
+    "kz_forms": [
+      "топтар тобы",
+      "супертоп",
+      "топтарды біріктіру",
+      "біріктірілген топ",
+      "топтар жиыны"
+    ],
+    "zh_forms": [
+      "小组组合",
+      "组合组",
+      "大组",
+      "超级组",
+      "组的组",
+      "组合"
+    ],
+    "meaning": "Omniscol domain concept: groups-of-groups",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "group"
+    ]
+  },
+  "free-group": {
+    "fr_forms": [
+      "groupe libre",
+      "groupe ouvert",
+      "groupe à inscriptions"
+    ],
+    "en_forms": [
+      "free group",
+      "open group"
+    ],
+    "de_forms": [
+      "freie gruppe",
+      "freie gruppen",
+      "offene gruppe",
+      "flexible gruppe"
+    ],
+    "es_forms": [
+      "grupo libre",
+      "grupos libres",
+      "grupo abierto",
+      "grupo de inscripción libre"
+    ],
+    "it_forms": [
+      "gruppo libero",
+      "gruppi liberi",
+      "gruppo aperto",
+      "gruppo a iscrizione libera"
+    ],
+    "pt_forms": [
+      "grupo livre",
+      "grupos livres",
+      "grupo aberto",
+      "grupo com inscrições"
+    ],
+    "nl_forms": [
+      "vrije groep",
+      "vrije groepen",
+      "open groep",
+      "groep met vrije inschrijving"
+    ],
+    "pl_forms": [
+      "grupa wolna",
+      "grupa otwarta",
+      "grupa z zapisami",
+      "wolna grupa"
+    ],
+    "ru_forms": [
+      "свободная группа",
+      "открытая группа",
+      "группа со свободной записью",
+      "группа с записью"
+    ],
+    "ar_forms": [
+      "مجموعة حرة",
+      "مجموعة مفتوحة",
+      "مجموعة بالتسجيل",
+      "مجموعة اختيارية مفتوحة"
+    ],
+    "he_forms": [
+      "קבוצה חופשית",
+      "קבוצות חופשיות",
+      "קבוצה פתוחה",
+      "קבוצת הרשמה",
+      "קבוצה גמישה"
+    ],
+    "vi_forms": [
+      "nhóm tự do",
+      "nhóm mở",
+      "nhóm linh hoạt",
+      "nhóm ghi danh"
+    ],
+    "kz_forms": [
+      "еркін топ",
+      "ашық топ",
+      "ерікті топ"
+    ],
+    "zh_forms": [
+      "自由组",
+      "开放组",
+      "自由分组",
+      "开放小组",
+      "灵活组"
+    ],
+    "meaning": "Omniscol domain concept: free-group",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "classroom": {
+    "fr_forms": [
+      "salle",
+      "salle de classe",
+      "salle de cours",
+      "amphithéâtre",
+      "amphi",
+      "local",
+      "room",
+      "salle dédiée"
+    ],
+    "en_forms": [
+      "classroom",
+      "room",
+      "lecture room",
+      "lecture hall",
+      "auditorium"
+    ],
+    "de_forms": [
+      "raum",
+      "räume",
+      "klassenraum",
+      "klassenzimmer",
+      "unterrichtsraum",
+      "hörsaal"
+    ],
+    "es_forms": [
+      "aula",
+      "aulas",
+      "sala",
+      "salón",
+      "sala de clase",
+      "anfiteatro",
+      "auditorio",
+      "aula magna"
+    ],
+    "it_forms": [
+      "aula",
+      "aule",
+      "sala",
+      "stanza",
+      "locale",
+      "aula magna",
+      "auditorium",
+      "anfiteatro"
+    ],
+    "pt_forms": [
+      "sala de aula",
+      "sala",
+      "salas",
+      "salas de aula",
+      "local",
+      "anfiteatro",
+      "auditório"
+    ],
+    "nl_forms": [
+      "lokaal",
+      "lokalen",
+      "klaslokaal",
+      "leslokaal",
+      "zaal",
+      "ruimte",
+      "collegezaal",
+      "auditorium",
+      "aula"
+    ],
+    "pl_forms": [
+      "sala",
+      "sale",
+      "sala lekcyjna",
+      "sala zajęciowa",
+      "pomieszczenie",
+      "aula",
+      "sala wykładowa"
+    ],
+    "ru_forms": [
+      "кабинет",
+      "кабинеты",
+      "учебный кабинет",
+      "аудитория",
+      "помещение",
+      "лекционный зал",
+      "поточная аудитория"
+    ],
+    "ar_forms": [
+      "قاعة",
+      "قاعات",
+      "قاعة الدرس",
+      "غرفة",
+      "فصل دراسي",
+      "مدرج",
+      "قاعة محاضرات"
+    ],
+    "he_forms": [
+      "כיתת לימוד",
+      "כיתות לימוד",
+      "חדר",
+      "חדר לימוד",
+      "אולם",
+      "כיתה פיזית",
+      "אודיטוריום",
+      "אולם הרצאות"
+    ],
+    "vi_forms": [
+      "phòng học",
+      "phòng",
+      "phòng lớp",
+      "phòng dạy",
+      "giảng đường",
+      "hội trường"
+    ],
+    "kz_forms": [
+      "кабинет",
+      "кабинеттер",
+      "сынып бөлмесі",
+      "аудитория",
+      "дәрісхана",
+      "бөлме",
+      "амфитеатр"
+    ],
+    "zh_forms": [
+      "教室",
+      "课室",
+      "房间",
+      "场地",
+      "教学场地",
+      "阶梯教室",
+      "报告厅"
+    ],
+    "meaning": "Omniscol domain concept: classroom",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "resource",
+      "site"
+    ]
+  },
+  "multi-room": {
+    "fr_forms": [
+      "multi-salles",
+      "salles multiples",
+      "plusieurs salles",
+      "dédoublement de salle",
+      "dédoublement",
+      "dédoublement de cours"
+    ],
+    "en_forms": [
+      "multi-room",
+      "multiple rooms",
+      "room duplication"
+    ],
+    "de_forms": [
+      "mehrere räume",
+      "zusätzliche räume",
+      "raumaufteilung",
+      "raumdoppelung",
+      "raumteilung",
+      "zusatzraum"
+    ],
+    "es_forms": [
+      "varias aulas",
+      "aulas múltiples",
+      "múltiples salas",
+      "desdoblamiento de aula",
+      "varias salas"
+    ],
+    "it_forms": [
+      "più aule",
+      "aule multiple",
+      "multi-aula",
+      "sdoppiamento dell'aula",
+      "aule multiple per lezione"
+    ],
+    "pt_forms": [
+      "várias salas",
+      "múltiplas salas",
+      "multissalas",
+      "salas múltiplas",
+      "desdobramento de sala",
+      "mais de uma sala"
+    ],
+    "nl_forms": [
+      "meerdere lokalen",
+      "multilokaal",
+      "verschillende lokalen",
+      "lokaalverdubbeling",
+      "les in twee lokalen"
+    ],
+    "pl_forms": [
+      "wiele sal",
+      "kilka sal",
+      "sale wielokrotne",
+      "podwojenie sali",
+      "dwie sale"
+    ],
+    "ru_forms": [
+      "несколько кабинетов",
+      "многокабинетное занятие",
+      "несколько аудиторий",
+      "дублирование кабинета",
+      "разделение по кабинетам"
+    ],
+    "ar_forms": [
+      "قاعات متعددة",
+      "قاعات متعددة لحصة",
+      "عدة قاعات",
+      "تعدد القاعات",
+      "ازدواج القاعة"
+    ],
+    "he_forms": [
+      "ריבוי כיתות לימוד",
+      "מספר חדרים",
+      "כמה חדרים",
+      "כיתות מרובות",
+      "פיצול חדרים",
+      "שיעור בכמה חדרים"
+    ],
+    "vi_forms": [
+      "nhiều phòng học",
+      "đa phòng",
+      "nhiều phòng",
+      "chia phòng",
+      "phòng kép"
+    ],
+    "kz_forms": [
+      "бірнеше кабинет",
+      "көп кабинет",
+      "қос кабинет",
+      "бірнеше аудитория"
+    ],
+    "zh_forms": [
+      "多教室",
+      "多间教室",
+      "多个房间",
+      "多场地",
+      "教室拆分"
+    ],
+    "meaning": "Omniscol *supporte* l'affectation de plusieurs salles à un même cours (par exemple un examen qui occupe trois amphis simultanément, ou un cours magistral retransmis en visio dans une salle annexe). Le manuel 2021 PDF indiquait à tort que ce n'était pas géré — c'est désormais possible et la documentation actuelle doit le refléter.",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "site": {
+    "fr_forms": [
+      "site",
+      "campus",
+      "lieu",
+      "bâtiment principal",
+      "antenne"
+    ],
+    "en_forms": [
+      "site",
+      "campus",
+      "location"
+    ],
+    "de_forms": [
+      "standort",
+      "standorte",
+      "campus",
+      "gebäude",
+      "ort",
+      "niederlassung"
+    ],
+    "es_forms": [
+      "sitio",
+      "sitios",
+      "sede",
+      "campus",
+      "edificio"
+    ],
+    "it_forms": [
+      "sito",
+      "siti",
+      "sede",
+      "campus",
+      "plesso"
+    ],
+    "pt_forms": [
+      "campus",
+      "local",
+      "locais",
+      "sede",
+      "prédio",
+      "edifício",
+      "unidade"
+    ],
+    "nl_forms": [
+      "vestiging",
+      "vestigingen",
+      "campus",
+      "locatie",
+      "gebouw"
+    ],
+    "pl_forms": [
+      "placówka",
+      "placówki",
+      "kampus",
+      "lokalizacja",
+      "budynek główny"
+    ],
+    "ru_forms": [
+      "кампус",
+      "кампусы",
+      "площадка",
+      "корпус",
+      "здание",
+      "место проведения"
+    ],
+    "ar_forms": [
+      "موقع",
+      "مواقع",
+      "حرم",
+      "مبنى",
+      "فرع"
+    ],
+    "he_forms": [
+      "אתר",
+      "אתרים",
+      "קמפוס",
+      "מבנה",
+      "בניין",
+      "מיקום"
+    ],
+    "vi_forms": [
+      "cơ sở",
+      "khuôn viên",
+      "địa điểm",
+      "tòa nhà",
+      "chi nhánh"
+    ],
+    "kz_forms": [
+      "кампус",
+      "кампустар",
+      "ғимарат",
+      "орын",
+      "филиал"
+    ],
+    "zh_forms": [
+      "校区",
+      "站点",
+      "地点",
+      "场所",
+      "校址"
+    ],
+    "meaning": "Omniscol domain concept: site",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "classroom"
+    ]
+  },
+  "resource": {
+    "fr_forms": [
+      "ressource",
+      "matériel",
+      "équipement mobile",
+      "vidéoprojecteur",
+      "valise",
+      "kit"
+    ],
+    "en_forms": [
+      "resource",
+      "equipment",
+      "mobile equipment"
+    ],
+    "de_forms": [
+      "ressource",
+      "ressourcen",
+      "material",
+      "ausstattung",
+      "gerät",
+      "beamer"
+    ],
+    "es_forms": [
+      "recurso",
+      "recursos",
+      "material",
+      "equipo",
+      "proyector",
+      "equipamiento móvil"
+    ],
+    "it_forms": [
+      "risorsa",
+      "risorse",
+      "attrezzatura",
+      "materiale",
+      "videoproiettore",
+      "kit"
+    ],
+    "pt_forms": [
+      "recurso",
+      "recursos",
+      "equipamento",
+      "material",
+      "projetor",
+      "equipamento móvel"
+    ],
+    "nl_forms": [
+      "resource",
+      "resources",
+      "materiaal",
+      "apparatuur",
+      "beamer",
+      "hulpmiddel"
+    ],
+    "pl_forms": [
+      "zasób",
+      "zasoby",
+      "sprzęt",
+      "wyposażenie",
+      "projektor",
+      "sprzęt mobilny"
+    ],
+    "ru_forms": [
+      "ресурс",
+      "ресурсы",
+      "оборудование",
+      "переносное оборудование",
+      "проектор",
+      "инвентарь"
+    ],
+    "ar_forms": [
+      "مورد",
+      "موارد",
+      "معدات",
+      "جهاز عرض",
+      "حقيبة معدات",
+      "عتاد"
+    ],
+    "he_forms": [
+      "משאב",
+      "משאבים",
+      "ציוד",
+      "ציוד נייד",
+      "מקרן",
+      "ערכה"
+    ],
+    "vi_forms": [
+      "tài nguyên",
+      "thiết bị",
+      "máy chiếu",
+      "dụng cụ",
+      "đồ dùng dạy học"
+    ],
+    "kz_forms": [
+      "ресурс",
+      "ресурстар",
+      "жабдық",
+      "құрал",
+      "проектор",
+      "тасымалды жабдық"
+    ],
+    "zh_forms": [
+      "资源",
+      "设备",
+      "器材",
+      "投影仪",
+      "移动设备",
+      "教具"
+    ],
+    "meaning": "Omniscol domain concept: resource",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "classroom"
+    ]
+  },
+  "classroom-specialization": {
+    "fr_forms": [
+      "spécialisation de salle",
+      "type de salle",
+      "salle spécialisée",
+      "salle dédiée matière",
+      "laboratoire",
+      "labo"
+    ],
+    "en_forms": [
+      "classroom specialization",
+      "special room",
+      "specialized room",
+      "laboratory",
+      "lab"
+    ],
+    "de_forms": [
+      "raumtyp",
+      "fachraum",
+      "spezialraum",
+      "spezialisierter raum",
+      "raumspezialisierung",
+      "labor"
+    ],
+    "es_forms": [
+      "especialización de aula",
+      "tipo de aula",
+      "aula especializada",
+      "aula equipada",
+      "laboratorio"
+    ],
+    "it_forms": [
+      "specializzazione dell'aula",
+      "specializzazione",
+      "tipo di aula",
+      "aula specializzata",
+      "aula dedicata",
+      "laboratorio"
+    ],
+    "pt_forms": [
+      "especialização de sala",
+      "especialização",
+      "tipo de sala",
+      "sala especializada",
+      "sala dedicada",
+      "laboratório",
+      "sala de laboratório"
+    ],
+    "nl_forms": [
+      "lokaalspecialisatie",
+      "speciaal lokaal",
+      "gespecialiseerd lokaal",
+      "type lokaal",
+      "vaklokaal",
+      "laboratorium",
+      "lab"
+    ],
+    "pl_forms": [
+      "specjalizacja sali",
+      "typ sali",
+      "sala specjalistyczna",
+      "sala dedykowana",
+      "laboratorium",
+      "pracownia"
+    ],
+    "ru_forms": [
+      "специализация кабинета",
+      "тип кабинета",
+      "специализированный кабинет",
+      "оснащение кабинета",
+      "профиль аудитории",
+      "лаборатория",
+      "учебная лаборатория"
+    ],
+    "ar_forms": [
+      "تخصص القاعة",
+      "تخصص قاعة",
+      "نوع القاعة",
+      "قاعة متخصصة",
+      "قاعة مخصصة",
+      "مختبر",
+      "معمل"
+    ],
+    "he_forms": [
+      "התמחות",
+      "התמחות כיתת לימוד",
+      "סוג חדר",
+      "חדר מתמחה",
+      "חדר ייעודי",
+      "מעבדה"
+    ],
+    "vi_forms": [
+      "phòng học chuyên dụng",
+      "chuyên môn hóa phòng học",
+      "loại phòng",
+      "phòng chuyên môn",
+      "phòng chuyên dụng",
+      "phòng thí nghiệm"
+    ],
+    "kz_forms": [
+      "кабинет мамандандыруы",
+      "мамандандыру",
+      "кабинет түрі",
+      "арнайы кабинет",
+      "мамандандырылған кабинет",
+      "зертхана"
+    ],
+    "zh_forms": [
+      "专业教室",
+      "教室专业化",
+      "专用教室",
+      "特殊教室",
+      "教室类型",
+      "实验室"
+    ],
+    "meaning": "Omniscol domain concept: classroom-specialization",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "teacher": {
+    "fr_forms": [
+      "professeur",
+      "prof",
+      "enseignant",
+      "intervenant",
+      "chargé de cours",
+      "chargé d'enseignement",
+      "formateur",
+      "instructeur"
+    ],
+    "en_forms": [
+      "teacher",
+      "instructor",
+      "faculty",
+      "lecturer"
+    ],
+    "de_forms": [
+      "lehrkraft",
+      "lehrkräfte",
+      "lehrer",
+      "lehrerin",
+      "dozent",
+      "dozentin"
+    ],
+    "es_forms": [
+      "profesor",
+      "profesores",
+      "docente",
+      "docentes",
+      "ponente",
+      "formador"
+    ],
+    "it_forms": [
+      "professore",
+      "professori",
+      "insegnante",
+      "docente",
+      "formatore"
+    ],
+    "pt_forms": [
+      "professor",
+      "professores",
+      "docente",
+      "instrutor",
+      "formador",
+      "educador"
+    ],
+    "nl_forms": [
+      "docent",
+      "docenten",
+      "leraar",
+      "lesgever",
+      "onderwijzer",
+      "leerkracht"
+    ],
+    "pl_forms": [
+      "nauczyciel",
+      "nauczyciele",
+      "wykładowca",
+      "prowadzący",
+      "trener",
+      "instruktor"
+    ],
+    "ru_forms": [
+      "преподаватель",
+      "преподаватели",
+      "учитель",
+      "педагог",
+      "лектор",
+      "инструктор",
+      "старший преподаватель",
+      "ассистент"
+    ],
+    "ar_forms": [
+      "معلم",
+      "معلمون",
+      "مدرس",
+      "أستاذ",
+      "مدرب",
+      "محاضر",
+      "أستاذ محاضر"
+    ],
+    "he_forms": [
+      "מורה",
+      "מורים",
+      "מרצה",
+      "מרצים",
+      "מדריך",
+      "מורה מקצועי"
+    ],
+    "vi_forms": [
+      "giáo viên",
+      "gv",
+      "giảng viên",
+      "người dạy",
+      "thầy cô"
+    ],
+    "kz_forms": [
+      "мұғалім",
+      "мұғалімдер",
+      "оқытушы",
+      "ұстаз",
+      "педагог"
+    ],
+    "zh_forms": [
+      "教师",
+      "老师",
+      "授课教师",
+      "讲师",
+      "任课老师",
+      "教员"
+    ],
+    "meaning": "Dans le supérieur et la formation continue, \"intervenant\" est l'usage dominant (cf. glossaire EM Lyon). Il englobe le professeur permanent, le vacataire et l'expert. Tous se ramènent à l'entité Omniscol \"professeur\" (rôle teacher).",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "student",
+      "staff",
+      "external-teacher",
+      "permanent-teacher"
+    ]
+  },
+  "external-teacher": {
+    "fr_forms": [
+      "vacataire",
+      "intervenant externe",
+      "intervenant occasionnel",
+      "conférencier",
+      "prof externe",
+      "visiting professor"
+    ],
+    "en_forms": [
+      "external teacher",
+      "adjunct",
+      "visiting professor",
+      "sessional",
+      "guest lecturer",
+      "guest speaker"
+    ],
+    "de_forms": [
+      "externe lehrkraft",
+      "externe lehrkräfte",
+      "externer dozent",
+      "honorardozent",
+      "lehrbeauftragter",
+      "gastdozent",
+      "gastredner"
+    ],
+    "es_forms": [
+      "profesor externo",
+      "docente externo",
+      "profesor invitado",
+      "ponente externo",
+      "colaborador externo",
+      "conferenciante",
+      "conferencista"
+    ],
+    "it_forms": [
+      "insegnante esterno",
+      "professore esterno",
+      "docente esterno",
+      "docente a contratto",
+      "collaboratore esterno",
+      "relatore",
+      "conferenziere"
+    ],
+    "pt_forms": [
+      "professor externo",
+      "professor convidado",
+      "professor visitante",
+      "instrutor externo",
+      "colaborador externo",
+      "conferencista",
+      "palestrante"
+    ],
+    "nl_forms": [
+      "externe docent",
+      "gastdocent",
+      "ingehuurde docent",
+      "externe lesgever",
+      "gastspreker"
+    ],
+    "pl_forms": [
+      "nauczyciel zewnętrzny",
+      "wykładowca zewnętrzny",
+      "prowadzący zewnętrzny",
+      "wykładowca gościnny",
+      "ekspert zewnętrzny",
+      "prelegent"
+    ],
+    "ru_forms": [
+      "внешний преподаватель",
+      "приглашённый преподаватель",
+      "совместитель",
+      "почасовик",
+      "сторонний преподаватель",
+      "приглашённый лектор"
+    ],
+    "ar_forms": [
+      "معلم خارجي",
+      "أستاذ متعاقد",
+      "مدرس متعاون",
+      "أستاذ زائر",
+      "متعاقد",
+      "محاضر ضيف"
+    ],
+    "he_forms": [
+      "מרצה חיצוני",
+      "מורה חיצוני",
+      "מרצה אורח",
+      "מורה זמני",
+      "מרצים חיצוניים",
+      "מרצה מן החוץ"
+    ],
+    "vi_forms": [
+      "giáo viên thỉnh giảng",
+      "giảng viên thỉnh giảng",
+      "giáo viên ngoài",
+      "giảng viên mời",
+      "giáo viên kiêm nhiệm",
+      "diễn giả"
+    ],
+    "kz_forms": [
+      "шақырылған оқытушы",
+      "сырттан келген маман",
+      "сыртқы оқытушы",
+      "уақытша оқытушы",
+      "келген ұстаз"
+    ],
+    "zh_forms": [
+      "外聘教师",
+      "外部教师",
+      "兼职教师",
+      "客座教授",
+      "校外教师",
+      "客座讲师",
+      "特邀嘉宾"
+    ],
+    "meaning": "Omniscol domain concept: external-teacher",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "teacher",
+      "permanent-teacher"
+    ]
+  },
+  "permanent-teacher": {
+    "fr_forms": [
+      "professeur permanent",
+      "prof permanent",
+      "titulaire",
+      "faculty permanent"
+    ],
+    "en_forms": [
+      "permanent teacher",
+      "tenured faculty"
+    ],
+    "de_forms": [
+      "festangestellte lehrkraft",
+      "feste lehrkraft",
+      "stammlehrkraft",
+      "festangestellter dozent",
+      "verbeamtete lehrkraft"
+    ],
+    "es_forms": [
+      "profesor permanente",
+      "profesor titular",
+      "titular",
+      "docente fijo",
+      "profesorado de plantilla"
+    ],
+    "it_forms": [
+      "professore di ruolo",
+      "docente di ruolo",
+      "professore titolare",
+      "docente titolare",
+      "insegnante a tempo indeterminato"
+    ],
+    "pt_forms": [
+      "professor efetivo",
+      "professor permanente",
+      "docente efetivo",
+      "professor titular",
+      "quadro permanente"
+    ],
+    "nl_forms": [
+      "vaste docent",
+      "vaste leerkracht",
+      "docent in vaste dienst",
+      "vaste lesgever"
+    ],
+    "pl_forms": [
+      "nauczyciel etatowy",
+      "wykładowca etatowy",
+      "nauczyciel stały",
+      "pracownik etatowy"
+    ],
+    "ru_forms": [
+      "штатный преподаватель",
+      "постоянный преподаватель",
+      "основной преподаватель",
+      "штатный педагог"
+    ],
+    "ar_forms": [
+      "معلم دائم",
+      "أستاذ دائم",
+      "مدرس متفرغ",
+      "أستاذ مثبت"
+    ],
+    "he_forms": [
+      "מורה קבוע",
+      "מורים קבועים",
+      "מרצה קבוע",
+      "סגל קבוע",
+      "מורה מן המניין"
+    ],
+    "vi_forms": [
+      "giáo viên cơ hữu",
+      "giảng viên cơ hữu",
+      "giáo viên biên chế",
+      "giáo viên chính thức"
+    ],
+    "kz_forms": [
+      "штаттағы мұғалім",
+      "тұрақты мұғалім",
+      "негізгі оқытушы",
+      "штаттық оқытушы"
+    ],
+    "zh_forms": [
+      "专职教师",
+      "在编教师",
+      "全职教师",
+      "固定教师",
+      "正式教师"
+    ],
+    "meaning": "Omniscol domain concept: permanent-teacher",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "teacher",
+      "external-teacher"
+    ]
+  },
+  "student": {
+    "fr_forms": [
+      "élève",
+      "étudiant",
+      "apprenant",
+      "participant",
+      "stagiaire",
+      "auditeur"
+    ],
+    "en_forms": [
+      "student",
+      "learner",
+      "participant",
+      "trainee",
+      "auditor"
+    ],
+    "de_forms": [
+      "schüler",
+      "schülerin",
+      "schülerinnen",
+      "student",
+      "studenten",
+      "lernende",
+      "teilnehmer",
+      "gasthörer"
+    ],
+    "es_forms": [
+      "estudiante",
+      "estudiantes",
+      "alumno",
+      "alumnos",
+      "participante",
+      "aprendiz",
+      "oyente"
+    ],
+    "it_forms": [
+      "studente",
+      "studenti",
+      "alunno",
+      "allievo",
+      "corsista",
+      "partecipante",
+      "uditore"
+    ],
+    "pt_forms": [
+      "aluno",
+      "alunos",
+      "estudante",
+      "estudantes",
+      "aprendiz",
+      "participante",
+      "ouvinte",
+      "aluno ouvinte"
+    ],
+    "nl_forms": [
+      "leerling",
+      "leerlingen",
+      "student",
+      "studenten",
+      "cursist",
+      "deelnemer",
+      "toehoorder"
+    ],
+    "pl_forms": [
+      "uczeń",
+      "uczniowie",
+      "student",
+      "studenci",
+      "kursant",
+      "słuchacz",
+      "wolny słuchacz"
+    ],
+    "ru_forms": [
+      "ученик",
+      "ученики",
+      "студент",
+      "учащийся",
+      "обучающийся",
+      "слушатель",
+      "вольнослушатель"
+    ],
+    "ar_forms": [
+      "طالب",
+      "طلاب",
+      "تلميذ",
+      "متعلم",
+      "متدرب",
+      "مشارك",
+      "طالب مستمع",
+      "مستمع"
+    ],
+    "he_forms": [
+      "תלמיד",
+      "תלמידים",
+      "סטודנט",
+      "סטודנטים",
+      "לומד",
+      "משתתף",
+      "חניך",
+      "שומע חופשי"
+    ],
+    "vi_forms": [
+      "học sinh",
+      "hs",
+      "sinh viên",
+      "học viên",
+      "người học",
+      "dự thính",
+      "sinh viên dự thính"
+    ],
+    "kz_forms": [
+      "оқушы",
+      "оқушылар",
+      "студент",
+      "білім алушы",
+      "тыңдаушы",
+      "қатысушы",
+      "еркін тыңдаушы"
+    ],
+    "zh_forms": [
+      "学生",
+      "学员",
+      "学习者",
+      "参与者",
+      "学员们",
+      "旁听生",
+      "旁听"
+    ],
+    "meaning": "\"Apprenant\" est le terme neutre du supérieur et de la formation continue (cf. glossaire EM Lyon). \"Participant\" pour la formation continue, \"étudiant\" pour la formation initiale.",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "teacher"
+    ]
+  },
+  "admin-user": {
+    "fr_forms": [
+      "administrateur",
+      "admin",
+      "gestionnaire",
+      "planificateur",
+      "scheduler"
+    ],
+    "en_forms": [
+      "administrator",
+      "admin",
+      "scheduler",
+      "planner"
+    ],
+    "de_forms": [
+      "administrator",
+      "admin",
+      "verwalter",
+      "planer",
+      "stundenplaner",
+      "disponent"
+    ],
+    "es_forms": [
+      "administrador",
+      "admin",
+      "gestor",
+      "planificador",
+      "responsable de horarios"
+    ],
+    "it_forms": [
+      "amministratore",
+      "admin",
+      "gestore",
+      "responsabile degli orari",
+      "pianificatore"
+    ],
+    "pt_forms": [
+      "administrador",
+      "admin",
+      "gestor",
+      "planejador",
+      "responsável pelos horários"
+    ],
+    "nl_forms": [
+      "beheerder",
+      "beheerders",
+      "admin",
+      "planner",
+      "roostermaker"
+    ],
+    "pl_forms": [
+      "administrator",
+      "admin",
+      "planista",
+      "koordynator planu",
+      "kierownik"
+    ],
+    "ru_forms": [
+      "администратор",
+      "админ",
+      "диспетчер расписания",
+      "составитель расписания",
+      "планировщик расписания"
+    ],
+    "ar_forms": [
+      "مسؤول",
+      "مدير",
+      "مشرف عام",
+      "منسق الجدول",
+      "مخطط"
+    ],
+    "he_forms": [
+      "מנהל",
+      "מנהלים",
+      "מנהל מערכת",
+      "מתכנן",
+      "אחראי שיבוץ"
+    ],
+    "vi_forms": [
+      "quản trị viên",
+      "quản trị",
+      "người lập lịch",
+      "người quản lý",
+      "người xếp thời khóa biểu"
+    ],
+    "kz_forms": [
+      "администратор",
+      "әкімші",
+      "кесте жасаушы",
+      "жоспарлаушы",
+      "басқарушы"
+    ],
+    "zh_forms": [
+      "管理员",
+      "管理者",
+      "排课员",
+      "系统管理员",
+      "排课人员"
+    ],
+    "meaning": "Omniscol domain concept: admin-user",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "staff"
+    ]
+  },
+  "staff": {
+    "fr_forms": [
+      "personnel",
+      "surveillant",
+      "surveillante",
+      "surveillant général",
+      "surveillante générale",
+      "vie scolaire",
+      "AED",
+      "AE",
+      "assistant d'éducation",
+      "assistante d'éducation",
+      "pion",
+      "pionne",
+      "CPE",
+      "conseiller principal d'éducation",
+      "conseillère principale d'éducation",
+      "appariteur",
+      "encadrant",
+      "encadrante",
+      "animateur",
+      "animatrice",
+      "moniteur",
+      "monitrice",
+      "accompagnateur",
+      "accompagnatrice",
+      "support"
+    ],
+    "en_forms": [
+      "staff",
+      "supervisor",
+      "support staff",
+      "monitor",
+      "school monitor",
+      "hall monitor",
+      "lunch monitor",
+      "playground monitor",
+      "pastoral staff",
+      "prefect",
+      "attendant",
+      "supervising staff",
+      "school assistant",
+      "education assistant"
+    ],
+    "de_forms": [
+      "Personal",
+      "Aufseher",
+      "Aufseherin",
+      "Aufsicht",
+      "Hofaufsicht",
+      "Erzieher",
+      "Erzieherin",
+      "Begleiter",
+      "Begleiterin",
+      "Pädagogische Fachkraft",
+      "aufsichtsperson",
+      "aufsichtskraft",
+      "betreuer",
+      "aufsichtspersonal",
+      "schulpersonal"
+    ],
+    "es_forms": [
+      "personal",
+      "vigilante",
+      "monitor",
+      "supervisor",
+      "asistente educativo",
+      "asistente de educación",
+      "educador",
+      "conserje",
+      "auxiliar",
+      "prefecto",
+      "miembro del personal"
+    ],
+    "it_forms": [
+      "personale",
+      "sorvegliante",
+      "supervisore",
+      "assistente educativo",
+      "educatore",
+      "bidello",
+      "ausiliario",
+      "monitor",
+      "collaboratore scolastico",
+      "coordinatore educativo"
+    ],
+    "pt_forms": [
+      "pessoal",
+      "monitor",
+      "supervisor",
+      "vigilante",
+      "educador",
+      "assistente educativo",
+      "auxiliar",
+      "membro do pessoal",
+      "equipe",
+      "funcionário",
+      "inspetor"
+    ],
+    "nl_forms": [
+      "personeelslid",
+      "personeel",
+      "toezichthouder",
+      "surveillant",
+      "onderwijsassistent",
+      "ondersteunend personeel"
+    ],
+    "pl_forms": [
+      "personel",
+      "opiekun",
+      "obsługa",
+      "wychowawca",
+      "dyżurny",
+      "pracownik wsparcia"
+    ],
+    "ru_forms": [
+      "персонал",
+      "сотрудник",
+      "дежурный",
+      "надзиратель",
+      "воспитатель",
+      "вспомогательный персонал"
+    ],
+    "ar_forms": [
+      "موظف",
+      "موظفون",
+      "مشرف",
+      "مراقب",
+      "مساعد تربوي",
+      "طاقم"
+    ],
+    "he_forms": [
+      "צוות",
+      "אנשי צוות",
+      "משגיח",
+      "משגיחים",
+      "עובד",
+      "סייע",
+      "אחראי תורנות"
+    ],
+    "vi_forms": [
+      "giám sát viên",
+      "nhân viên",
+      "giám thị",
+      "giám sát trưởng",
+      "nhân viên hỗ trợ",
+      "cán bộ phụ trách"
+    ],
+    "kz_forms": [
+      "кезекші",
+      "тәрбиеші",
+      "қызметкер",
+      "бақылаушы",
+      "кезекші мұғалім",
+      "тәрбие қызметі",
+      "персонал"
+    ],
+    "zh_forms": [
+      "员工",
+      "职员",
+      "监督人员",
+      "值班人员",
+      "后勤人员",
+      "人员"
+    ],
+    "meaning": "Le rôle \"staff\" couvre l'équipe de vie scolaire. \"AED\" (Assistant d'Éducation) est le jargon MEN/français le plus courant ; \"pion\" est l'argot étudiant ; \"CPE\" (Conseiller Principal d'Éducation) est le responsable hiérarchique des AED. À l'international, les équivalents varient : \"monitor\" / \"supervisor\" (anglais international), \"hall monitor\" / \"lunch monitor\" (US K-12), \"prefect\" (UK + Commonwea",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "teacher",
+      "admin-user"
+    ]
+  },
+  "wishes": {
+    "fr_forms": [
+      "disponibilités",
+      "indisponibilités",
+      "préférences",
+      "vœux",
+      "voeux",
+      "dispos"
+    ],
+    "en_forms": [
+      "availability",
+      "unavailability",
+      "preferences",
+      "wishes"
+    ],
+    "de_forms": [
+      "verfügbarkeiten",
+      "verfügbarkeit",
+      "wünsche",
+      "präferenzen",
+      "nichtverfügbarkeit",
+      "sperrzeiten"
+    ],
+    "es_forms": [
+      "disponibilidad",
+      "disponibilidades",
+      "indisponibilidad",
+      "preferencias",
+      "deseos",
+      "restricciones horarias"
+    ],
+    "it_forms": [
+      "disponibilità",
+      "indisponibilità",
+      "preferenze",
+      "vincoli orari",
+      "preferenze orarie"
+    ],
+    "pt_forms": [
+      "disponibilidades",
+      "disponibilidade",
+      "indisponibilidades",
+      "preferências",
+      "desejos"
+    ],
+    "nl_forms": [
+      "beschikbaarheid",
+      "onbeschikbaarheid",
+      "voorkeuren",
+      "wensen",
+      "beschikbaarheden"
+    ],
+    "pl_forms": [
+      "dostępność",
+      "niedostępność",
+      "preferencje",
+      "życzenia",
+      "dyspozycyjność"
+    ],
+    "ru_forms": [
+      "доступность",
+      "пожелания",
+      "предпочтения",
+      "недоступность",
+      "свободное время",
+      "занятость"
+    ],
+    "ar_forms": [
+      "أوقات التوفر",
+      "التوفر",
+      "عدم التوفر",
+      "رغبات",
+      "تفضيلات",
+      "الإتاحة"
+    ],
+    "he_forms": [
+      "זמינות",
+      "אי זמינות",
+      "העדפות",
+      "העדפה",
+      "אילוצי זמן",
+      "זמינות מורה"
+    ],
+    "vi_forms": [
+      "thời gian rảnh",
+      "nguyện vọng",
+      "thời gian trống",
+      "thời gian bận",
+      "mong muốn"
+    ],
+    "kz_forms": [
+      "қолжетімділік",
+      "қалаулар",
+      "тілектер",
+      "қолжетімсіздік",
+      "артықшылықтар"
+    ],
+    "zh_forms": [
+      "可用时间",
+      "偏好",
+      "空闲时间",
+      "不可用时间",
+      "时间偏好",
+      "意愿"
+    ],
+    "meaning": "Omniscol domain concept: wishes",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "constraint"
+    ]
+  },
+  "constraint": {
+    "fr_forms": [
+      "contrainte",
+      "blocage",
+      "indisponibilité forte",
+      "exigence"
+    ],
+    "en_forms": [
+      "constraint",
+      "hard constraint",
+      "requirement"
+    ],
+    "de_forms": [
+      "einschränkung",
+      "einschränkungen",
+      "nebenbedingung",
+      "harte einschränkung",
+      "sperre",
+      "vorgabe"
+    ],
+    "es_forms": [
+      "restricción",
+      "restricciones",
+      "bloqueo",
+      "exigencia",
+      "requisito"
+    ],
+    "it_forms": [
+      "vincolo",
+      "vincoli",
+      "vincolo rigido",
+      "blocco",
+      "requisito"
+    ],
+    "pt_forms": [
+      "restrição",
+      "restrições",
+      "bloqueio",
+      "exigência",
+      "limitação"
+    ],
+    "nl_forms": [
+      "beperking",
+      "beperkingen",
+      "harde beperking",
+      "blokkering",
+      "vereiste"
+    ],
+    "pl_forms": [
+      "ograniczenie",
+      "ograniczenia",
+      "ograniczenie czasowe",
+      "blokada",
+      "wymóg"
+    ],
+    "ru_forms": [
+      "ограничение",
+      "ограничения",
+      "жёсткое ограничение",
+      "требование",
+      "блокировка"
+    ],
+    "ar_forms": [
+      "قيد",
+      "قيود",
+      "حظر",
+      "إلزام",
+      "شرط صارم"
+    ],
+    "he_forms": [
+      "אילוץ",
+      "אילוצים",
+      "הגבלה",
+      "אילוץ קשיח",
+      "דרישה",
+      "חסימה"
+    ],
+    "vi_forms": [
+      "ràng buộc",
+      "ràng buộc cứng",
+      "yêu cầu bắt buộc",
+      "giới hạn"
+    ],
+    "kz_forms": [
+      "шектеу",
+      "шектеулер",
+      "қатаң шектеу",
+      "талап",
+      "бұғаттау"
+    ],
+    "zh_forms": [
+      "约束",
+      "限制",
+      "硬约束",
+      "时间限制",
+      "强制要求"
+    ],
+    "meaning": "Omniscol domain concept: constraint",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "wishes"
+    ]
+  },
+  "incompatibility": {
+    "fr_forms": [
+      "incompatibilité",
+      "exclusion",
+      "anti-chaînage",
+      "interdiction de séquence"
+    ],
+    "en_forms": [
+      "incompatibility",
+      "exclusion"
+    ],
+    "de_forms": [
+      "inkompatibilität",
+      "inkompatibilitäten",
+      "unverträglichkeit",
+      "ausschluss",
+      "reihenfolgesperre"
+    ],
+    "es_forms": [
+      "incompatibilidad",
+      "incompatibilidades",
+      "exclusión",
+      "prohibición de secuencia"
+    ],
+    "it_forms": [
+      "incompatibilità",
+      "esclusione",
+      "conflitto tra materie",
+      "divieto di sequenza"
+    ],
+    "pt_forms": [
+      "incompatibilidade",
+      "incompatibilidades",
+      "exclusão",
+      "sequência proibida"
+    ],
+    "nl_forms": [
+      "incompatibiliteit",
+      "onverenigbaarheid",
+      "uitsluiting",
+      "verbod"
+    ],
+    "pl_forms": [
+      "niekompatybilność",
+      "wykluczenie",
+      "kolizja przedmiotów",
+      "niezgodność",
+      "zakaz sekwencji"
+    ],
+    "ru_forms": [
+      "несовместимость",
+      "исключение",
+      "запрет на сочетание",
+      "взаимоисключение",
+      "конфликт дисциплин"
+    ],
+    "ar_forms": [
+      "عدم توافق",
+      "تعارض المواد",
+      "استبعاد",
+      "منع التسلسل",
+      "تنافر"
+    ],
+    "he_forms": [
+      "אי-התאמה",
+      "אי התאמה",
+      "אי-התאמות",
+      "חוסר התאמה",
+      "הדרה",
+      "איסור רצף"
+    ],
+    "vi_forms": [
+      "không tương thích",
+      "xung khắc",
+      "loại trừ",
+      "cấm xếp liền nhau"
+    ],
+    "kz_forms": [
+      "үйлеспеушілік",
+      "үйлесімсіздік",
+      "сәйкессіздік",
+      "тыйым",
+      "болмайтын тіркес"
+    ],
+    "zh_forms": [
+      "不兼容",
+      "互斥",
+      "排斥",
+      "冲突限制",
+      "不相容"
+    ],
+    "meaning": "Omniscol domain concept: incompatibility",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "school-year": {
+    "fr_forms": [
+      "année scolaire",
+      "année universitaire",
+      "année académique",
+      "exercice"
+    ],
+    "en_forms": [
+      "school year",
+      "academic year"
+    ],
+    "de_forms": [
+      "schuljahr",
+      "schuljahre",
+      "studienjahr",
+      "akademisches jahr",
+      "lehrjahr"
+    ],
+    "es_forms": [
+      "año escolar",
+      "año académico",
+      "año lectivo",
+      "curso académico",
+      "año universitario"
+    ],
+    "it_forms": [
+      "anno scolastico",
+      "anno accademico",
+      "annualità",
+      "anno universitario"
+    ],
+    "pt_forms": [
+      "ano letivo",
+      "anos letivos",
+      "ano escolar",
+      "ano acadêmico"
+    ],
+    "nl_forms": [
+      "schooljaar",
+      "schooljaren",
+      "studiejaar",
+      "academisch jaar",
+      "collegejaar"
+    ],
+    "pl_forms": [
+      "rok szkolny",
+      "rok akademicki",
+      "rok nauki",
+      "rok"
+    ],
+    "ru_forms": [
+      "учебный год",
+      "академический год",
+      "год обучения"
+    ],
+    "ar_forms": [
+      "السنة الدراسية",
+      "سنة دراسية",
+      "العام الدراسي",
+      "السنة الجامعية",
+      "السنة الأكاديمية"
+    ],
+    "he_forms": [
+      "שנת לימודים",
+      "שנה לימודית",
+      "שנה אקדמית",
+      "שנה",
+      "שנת הלימודים"
+    ],
+    "vi_forms": [
+      "năm học",
+      "niên khóa",
+      "năm học thuật",
+      "năm học mới"
+    ],
+    "kz_forms": [
+      "оқу жылы",
+      "оқу жылдары",
+      "академиялық жыл",
+      "жыл"
+    ],
+    "zh_forms": [
+      "学年",
+      "学年度",
+      "年度",
+      "学期年",
+      "教学年度"
+    ],
+    "meaning": "Omniscol domain concept: school-year",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "semester": {
+    "fr_forms": [
+      "semestre",
+      "période",
+      "période académique",
+      "trimestre"
+    ],
+    "en_forms": [
+      "semester",
+      "term",
+      "period",
+      "academic period"
+    ],
+    "de_forms": [
+      "semester",
+      "trimester",
+      "periode",
+      "halbjahr",
+      "studienabschnitt"
+    ],
+    "es_forms": [
+      "semestre",
+      "trimestre",
+      "cuatrimestre",
+      "período",
+      "período académico"
+    ],
+    "it_forms": [
+      "semestre",
+      "periodo",
+      "quadrimestre",
+      "trimestre",
+      "periodo accademico"
+    ],
+    "pt_forms": [
+      "semestre",
+      "semestres",
+      "período",
+      "trimestre",
+      "período letivo"
+    ],
+    "nl_forms": [
+      "semester",
+      "semesters",
+      "periode",
+      "trimester",
+      "blok"
+    ],
+    "pl_forms": [
+      "semestr",
+      "okres",
+      "trymestr",
+      "okres nauczania",
+      "półrocze"
+    ],
+    "ru_forms": [
+      "семестр",
+      "триместр",
+      "период",
+      "четверть",
+      "учебный период"
+    ],
+    "ar_forms": [
+      "فصل دراسي",
+      "سداسي",
+      "فصل",
+      "فترة",
+      "ثلث دراسي"
+    ],
+    "he_forms": [
+      "סמסטר",
+      "סמסטרים",
+      "תקופה",
+      "מחצית",
+      "חציון",
+      "תקופה אקדמית"
+    ],
+    "vi_forms": [
+      "học kỳ",
+      "học kì",
+      "kỳ học",
+      "kì học",
+      "giai đoạn",
+      "quý"
+    ],
+    "kz_forms": [
+      "семестр",
+      "тоқсан",
+      "кезең",
+      "оқу кезеңі",
+      "академиялық кезең"
+    ],
+    "zh_forms": [
+      "学期",
+      "半学年",
+      "教学周期",
+      "学段",
+      "学时段"
+    ],
+    "meaning": "Omniscol domain concept: semester",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "alternate-weeks": {
+    "fr_forms": [
+      "semaines alternées",
+      "semaines a/b",
+      "semaine paire impaire",
+      "alternance hebdomadaire"
+    ],
+    "en_forms": [
+      "alternate weeks",
+      "alternating weeks",
+      "week a/b"
+    ],
+    "de_forms": [
+      "wechselwochen",
+      "alternierende wochen",
+      "wochen a/b",
+      "gerade und ungerade wochen",
+      "wochenwechsel"
+    ],
+    "es_forms": [
+      "semanas alternas",
+      "semanas alternativas",
+      "semanas a/b",
+      "semanas pares e impares",
+      "alternancia semanal"
+    ],
+    "it_forms": [
+      "settimane alternate",
+      "settimane a/b",
+      "alternanza settimanale",
+      "settimana pari dispari"
+    ],
+    "pt_forms": [
+      "semanas alternadas",
+      "semana alternada",
+      "semanas a/b",
+      "semana par e ímpar",
+      "alternância semanal"
+    ],
+    "nl_forms": [
+      "afwisselende weken",
+      "alternerende weken",
+      "week a/b",
+      "even/oneven weken",
+      "weekwissel"
+    ],
+    "pl_forms": [
+      "tygodnie naprzemienne",
+      "tygodnie a/b",
+      "tydzień parzysty nieparzysty",
+      "naprzemienność tygodni"
+    ],
+    "ru_forms": [
+      "чередование недель",
+      "недели a/b",
+      "чётные нечётные недели",
+      "чередующиеся недели",
+      "недели 1/2"
+    ],
+    "ar_forms": [
+      "أسابيع متناوبة",
+      "تناوب أسبوعي",
+      "أسبوع A/B",
+      "أسبوع زوجي فردي",
+      "تناوب الأسابيع"
+    ],
+    "he_forms": [
+      "שבועות מתחלפים",
+      "שבועות A/B",
+      "שבוע זוגי אי זוגי",
+      "שבוע A B",
+      "חילופי שבועות",
+      "החלפת שבועות"
+    ],
+    "vi_forms": [
+      "tuần luân phiên",
+      "tuần a/b",
+      "tuần chẵn lẻ",
+      "luân phiên hàng tuần",
+      "tuần xen kẽ"
+    ],
+    "kz_forms": [
+      "кезектесетін апталар",
+      "апта кезектесуі",
+      "A/B апталар",
+      "жұп тақ апта",
+      "апталық кезектесу"
+    ],
+    "zh_forms": [
+      "交替周",
+      "双周交替",
+      "单双周",
+      "A/B周",
+      "轮换周",
+      "隔周"
+    ],
+    "meaning": "Omniscol domain concept: alternate-weeks",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "vacation": {
+    "fr_forms": [
+      "vacances",
+      "congés",
+      "fériés",
+      "période non travaillée"
+    ],
+    "en_forms": [
+      "holidays",
+      "vacation",
+      "breaks",
+      "days off"
+    ],
+    "de_forms": [
+      "ferien",
+      "schulferien",
+      "feiertage",
+      "freie tage",
+      "unterrichtsfreie zeit"
+    ],
+    "es_forms": [
+      "vacaciones",
+      "días festivos",
+      "festivos",
+      "descansos",
+      "días no lectivos"
+    ],
+    "it_forms": [
+      "vacanze",
+      "ferie",
+      "festività",
+      "giorni festivi",
+      "periodo di chiusura"
+    ],
+    "pt_forms": [
+      "férias",
+      "feriados",
+      "recesso",
+      "folgas",
+      "dias de folga"
+    ],
+    "nl_forms": [
+      "vakantie",
+      "vakanties",
+      "verlof",
+      "feestdagen",
+      "vrije dagen"
+    ],
+    "pl_forms": [
+      "dni wolne",
+      "wakacje",
+      "ferie",
+      "święta",
+      "przerwa"
+    ],
+    "ru_forms": [
+      "каникулы",
+      "праздничные дни",
+      "нерабочие дни",
+      "перерыв в занятиях"
+    ],
+    "ar_forms": [
+      "عطل",
+      "عطلة",
+      "إجازات",
+      "أيام العطل",
+      "فترة غير دراسية"
+    ],
+    "he_forms": [
+      "חופשות",
+      "חופשה",
+      "חגים",
+      "ימי חופש",
+      "פגרה",
+      "ימים חופשיים"
+    ],
+    "vi_forms": [
+      "nghỉ lễ",
+      "ngày nghỉ",
+      "kỳ nghỉ",
+      "ngày lễ",
+      "nghỉ phép"
+    ],
+    "kz_forms": [
+      "каникул",
+      "демалыс",
+      "мереке",
+      "мейрам",
+      "демалыс күндері",
+      "оқусыз кезең"
+    ],
+    "zh_forms": [
+      "假期",
+      "放假",
+      "假日",
+      "节假日",
+      "休息日",
+      "寒暑假"
+    ],
+    "meaning": "Omniscol domain concept: vacation",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "timetable-mode-weekly": {
+    "fr_forms": [
+      "hebdomadaire",
+      "semaine type",
+      "recurrent",
+      "récurrent"
+    ],
+    "en_forms": [
+      "weekly",
+      "recurring"
+    ],
+    "de_forms": [
+      "wöchentlich",
+      "wochenmodus",
+      "musterwoche",
+      "wiederkehrend",
+      "regelwoche"
+    ],
+    "es_forms": [
+      "semanal",
+      "recurrente",
+      "semana tipo",
+      "semana modelo",
+      "horario recurrente"
+    ],
+    "it_forms": [
+      "settimanale",
+      "settimana tipo",
+      "ricorrente",
+      "orario settimanale"
+    ],
+    "pt_forms": [
+      "semanal",
+      "semana padrão",
+      "recorrente",
+      "horário recorrente",
+      "semana tipo"
+    ],
+    "nl_forms": [
+      "wekelijks",
+      "weekrooster",
+      "terugkerend",
+      "standaardweek"
+    ],
+    "pl_forms": [
+      "tryb tygodniowy",
+      "tygodniowy",
+      "tydzień wzorcowy",
+      "powtarzalny",
+      "cykliczny tygodniowo"
+    ],
+    "ru_forms": [
+      "недельный режим",
+      "недельное расписание",
+      "еженедельное",
+      "типовая неделя",
+      "повторяющееся"
+    ],
+    "ar_forms": [
+      "أسبوعي",
+      "أسبوع نموذجي",
+      "متكرر",
+      "نمط أسبوعي"
+    ],
+    "he_forms": [
+      "שבועית",
+      "שבועי",
+      "שבוע טיפוסי",
+      "מחזורי שבועי",
+      "חוזר",
+      "חזרה שבועית"
+    ],
+    "vi_forms": [
+      "hàng tuần",
+      "theo tuần",
+      "tuần mẫu",
+      "lặp lại",
+      "định kỳ"
+    ],
+    "kz_forms": [
+      "апталық",
+      "үлгі апта",
+      "қайталанатын",
+      "апта сайын",
+      "тұрақты апта"
+    ],
+    "zh_forms": [
+      "周课表",
+      "每周",
+      "按周",
+      "周循环",
+      "标准周"
+    ],
+    "meaning": "Omniscol domain concept: timetable-mode-weekly",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "timetable-mode-cyclic": {
+    "fr_forms": [
+      "cyclique",
+      "cycle",
+      "jours numérotés"
+    ],
+    "en_forms": [
+      "cyclic",
+      "cyclical",
+      "day-numbered"
+    ],
+    "de_forms": [
+      "zyklisch",
+      "zyklus",
+      "tageszyklus",
+      "zyklusmodell",
+      "nummerierte tage"
+    ],
+    "es_forms": [
+      "cíclico",
+      "ciclo",
+      "días numerados",
+      "horario por ciclo",
+      "ciclo de días"
+    ],
+    "it_forms": [
+      "ciclo",
+      "ciclico",
+      "ciclo di giorni",
+      "giorni numerati",
+      "rotazione di giorni"
+    ],
+    "pt_forms": [
+      "cíclico",
+      "ciclo",
+      "ciclo de dias",
+      "dias numerados",
+      "modo cíclico"
+    ],
+    "nl_forms": [
+      "cyclisch",
+      "cyclus",
+      "cyclisch rooster",
+      "genummerde dagen"
+    ],
+    "pl_forms": [
+      "tryb cykliczny",
+      "cykliczny",
+      "cykl",
+      "dni numerowane",
+      "numerowany cykl"
+    ],
+    "ru_forms": [
+      "цикличный режим",
+      "цикл",
+      "циклическое расписание",
+      "нумерованные дни",
+      "цикличное расписание"
+    ],
+    "ar_forms": [
+      "دوري",
+      "دورة",
+      "نمط دوري",
+      "أيام مرقمة"
+    ],
+    "he_forms": [
+      "מחזורית",
+      "מחזורי",
+      "מחזור",
+      "סבב ימים",
+      "ימים ממוספרים",
+      "מחזור ימים"
+    ],
+    "vi_forms": [
+      "chu kỳ",
+      "theo chu kỳ",
+      "ngày đánh số",
+      "lặp theo chu kỳ"
+    ],
+    "kz_forms": [
+      "циклдік",
+      "цикл",
+      "нөмірленген күндер",
+      "күн ротациясы",
+      "циклмен қайталану"
+    ],
+    "zh_forms": [
+      "周期课表",
+      "循环课表",
+      "日循环",
+      "轮换日",
+      "按天循环"
+    ],
+    "meaning": "Omniscol domain concept: timetable-mode-cyclic",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "timetable-mode-calendar": {
+    "fr_forms": [
+      "calendrier",
+      "mode agenda",
+      "planning daté",
+      "à la date",
+      "sans récurrence"
+    ],
+    "en_forms": [
+      "calendar",
+      "agenda",
+      "dated",
+      "non-recurring"
+    ],
+    "de_forms": [
+      "kalender",
+      "kalendermodus",
+      "kalenderbasiert",
+      "datumsbasiert",
+      "ohne wiederholung",
+      "terminbasiert"
+    ],
+    "es_forms": [
+      "calendario",
+      "modo calendario",
+      "horario por fechas",
+      "fechado",
+      "sin recurrencia"
+    ],
+    "it_forms": [
+      "calendario",
+      "modalità calendario",
+      "orario datato",
+      "da data a data",
+      "senza ricorrenza"
+    ],
+    "pt_forms": [
+      "calendário",
+      "modo agenda",
+      "horário datado",
+      "sem recorrência",
+      "datado"
+    ],
+    "nl_forms": [
+      "kalender",
+      "agenda",
+      "gedateerd",
+      "niet-terugkerend",
+      "op datum"
+    ],
+    "pl_forms": [
+      "kalendarz",
+      "tryb kalendarza",
+      "plan z datami",
+      "datowany",
+      "bez powtarzalności"
+    ],
+    "ru_forms": [
+      "календарный режим",
+      "календарь",
+      "по датам",
+      "датированное расписание",
+      "без повторения",
+      "режим органайзера"
+    ],
+    "ar_forms": [
+      "تقويمي",
+      "وضع التقويم",
+      "جدول مؤرخ",
+      "حسب التاريخ",
+      "بدون تكرار"
+    ],
+    "he_forms": [
+      "לוח שנה",
+      "מצב יומן",
+      "תכנון מתוארך",
+      "לפי תאריך",
+      "ללא חזרה",
+      "מתאריך לתאריך"
+    ],
+    "vi_forms": [
+      "lịch",
+      "theo lịch",
+      "theo ngày",
+      "không lặp lại",
+      "chế độ lịch"
+    ],
+    "kz_forms": [
+      "күнтізбе",
+      "күнтізбе режимі",
+      "күнделікті кесте",
+      "датамен",
+      "қайталанбайтын"
+    ],
+    "zh_forms": [
+      "日历课表",
+      "日历",
+      "按日期",
+      "逐日安排",
+      "无重复",
+      "定日课表"
+    ],
+    "meaning": "Omniscol domain concept: timetable-mode-calendar",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "concatenated-lessons": {
+    "fr_forms": [
+      "cours concaténés",
+      "séances accolées",
+      "cours consécutifs",
+      "cours doubles",
+      "doublons consécutifs"
+    ],
+    "en_forms": [
+      "concatenated lessons",
+      "back-to-back lessons",
+      "consecutive lessons"
+    ],
+    "de_forms": [
+      "aneinandergereihte unterrichtsstunden",
+      "aufeinanderfolgende stunden",
+      "doppelstunde",
+      "blockstunden",
+      "verkettete unterrichtsstunden"
+    ],
+    "es_forms": [
+      "sesiones concatenadas",
+      "concatenación",
+      "clases consecutivas",
+      "sesiones seguidas",
+      "clases dobles"
+    ],
+    "it_forms": [
+      "lezioni concatenate",
+      "concatenazione",
+      "lezioni consecutive",
+      "lezioni accostate",
+      "lezioni doppie"
+    ],
+    "pt_forms": [
+      "aulas geminadas",
+      "aulas concatenadas",
+      "aulas consecutivas",
+      "aulas seguidas",
+      "aula dupla",
+      "aulas coladas"
+    ],
+    "nl_forms": [
+      "aaneengesloten lessen",
+      "samengevoegde lessen",
+      "opeenvolgende lessen",
+      "dubbele lessen",
+      "blokuur"
+    ],
+    "pl_forms": [
+      "lekcje połączone",
+      "lekcje sąsiadujące",
+      "lekcje kolejne",
+      "podwójna lekcja",
+      "blok lekcji"
+    ],
+    "ru_forms": [
+      "объединённые занятия",
+      "спаренные занятия",
+      "сдвоенные занятия",
+      "занятия подряд",
+      "последовательные занятия"
+    ],
+    "ar_forms": [
+      "حصص مدمجة",
+      "دمج الحصص",
+      "حصص متتالية",
+      "حصص ملتصقة",
+      "حصة مزدوجة"
+    ],
+    "he_forms": [
+      "שיעורים מאוחדים",
+      "שיעור מאוחד",
+      "שיעורים צמודים",
+      "שיעורים רצופים",
+      "שיעור כפול",
+      "שיעורים עוקבים"
+    ],
+    "vi_forms": [
+      "tiết học liền nhau",
+      "tiết liền kề",
+      "tiết liên tiếp",
+      "tiết kép",
+      "tiết đôi"
+    ],
+    "kz_forms": [
+      "біріктірілген сабақтар",
+      "қос сабақ",
+      "тізбектелген сабақ",
+      "қатарынан сабақ",
+      "жалғасқан сабақтар"
+    ],
+    "zh_forms": [
+      "合并课程",
+      "连堂课",
+      "连续课时",
+      "拼接课程",
+      "双节课",
+      "连排"
+    ],
+    "meaning": "Omniscol domain concept: concatenated-lessons",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "associated-lessons": {
+    "fr_forms": [
+      "cours associés",
+      "alternance demi-groupes",
+      "alternance groupe a/b",
+      "swap"
+    ],
+    "en_forms": [
+      "associated lessons",
+      "alternating half-class lessons"
+    ],
+    "de_forms": [
+      "verknüpfte unterrichtsstunden",
+      "verbundene unterrichtsstunden",
+      "wechsel der halbgruppen",
+      "gruppenwechsel a/b",
+      "alternierende halbklassen"
+    ],
+    "es_forms": [
+      "sesiones asociadas",
+      "clases asociadas",
+      "alternancia de grupos",
+      "alternancia de medios grupos",
+      "grupos que alternan"
+    ],
+    "it_forms": [
+      "lezioni associate",
+      "associazione di lezioni",
+      "alternanza tra mezze classi",
+      "alternanza dei gruppi a/b"
+    ],
+    "pt_forms": [
+      "aulas associadas",
+      "alternância de grupos",
+      "alternância de meias turmas",
+      "revezamento de grupos",
+      "aulas em revezamento"
+    ],
+    "nl_forms": [
+      "geassocieerde lessen",
+      "afwisselende groepen",
+      "wisselende halve groepen",
+      "alternerende groepen",
+      "groep a/b wissel"
+    ],
+    "pl_forms": [
+      "lekcje skojarzone",
+      "skojarzenie lekcji",
+      "naprzemienne grupy",
+      "wymiana grup a/b"
+    ],
+    "ru_forms": [
+      "связанные занятия",
+      "чередование групп",
+      "чередование подгрупп",
+      "родственные занятия",
+      "обмен группами"
+    ],
+    "ar_forms": [
+      "حصص مرتبطة",
+      "ربط الحصص",
+      "حصص متناوبة",
+      "تناوب أنصاف الصف",
+      "تناوب المجموعات",
+      "ترتيب متبادل"
+    ],
+    "he_forms": [
+      "שיעורים משויכים",
+      "שיעור משויך",
+      "טנדם",
+      "קבוצות מתחלפות",
+      "חילופי חצאי כיתה",
+      "שיעורים מתחלפים"
+    ],
+    "vi_forms": [
+      "tiết học liên hệ",
+      "tiết học kết nối",
+      "tiết liên hệ",
+      "nhóm luân phiên",
+      "luân phiên nửa lớp"
+    ],
+    "kz_forms": [
+      "байланыстырылған сабақтар",
+      "топтардың кезектесуі",
+      "жарты топ кезектесуі",
+      "A/B топ кезектесуі",
+      "өзара байланысты сабақтар"
+    ],
+    "zh_forms": [
+      "关联课程",
+      "轮换课程",
+      "小组轮换",
+      "半班轮换",
+      "交替课程"
+    ],
+    "meaning": "Omniscol domain concept: associated-lessons",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "co-teaching": {
+    "fr_forms": [
+      "co-enseignement",
+      "binôme",
+      "double intervenant",
+      "intervenant principal et secondaire"
+    ],
+    "en_forms": [
+      "co-teaching",
+      "team teaching",
+      "dual instructor"
+    ],
+    "de_forms": [
+      "co-teaching",
+      "teamteaching",
+      "gemeinsamer unterricht",
+      "doppelbesetzung",
+      "zwei lehrkräfte",
+      "tandem"
+    ],
+    "es_forms": [
+      "co-enseñanza",
+      "co-profesores",
+      "docencia compartida",
+      "doble docente",
+      "pareja pedagógica"
+    ],
+    "it_forms": [
+      "compresenza",
+      "co-insegnamento",
+      "co-insegnante",
+      "insegnamento condiviso",
+      "doppio docente"
+    ],
+    "pt_forms": [
+      "coensino",
+      "co-ensino",
+      "docência compartilhada",
+      "ensino em dupla",
+      "dois professores"
+    ],
+    "nl_forms": [
+      "co-teaching",
+      "samen lesgeven",
+      "teamteaching",
+      "duodocenten",
+      "twee docenten"
+    ],
+    "pl_forms": [
+      "współnauczanie",
+      "współprowadzenie",
+      "nauczanie zespołowe",
+      "dwóch prowadzących",
+      "drugi nauczyciel"
+    ],
+    "ru_forms": [
+      "совместное преподавание",
+      "два преподавателя",
+      "совместное ведение занятия",
+      "командное преподавание"
+    ],
+    "ar_forms": [
+      "تدريس مشترك",
+      "تشارك التدريس",
+      "معلمان",
+      "ثنائي تدريس",
+      "تدريس جماعي"
+    ],
+    "he_forms": [
+      "הוראה משותפת",
+      "הוראה בצוות",
+      "שני מורים",
+      "שני מרצים",
+      "מורה נוסף",
+      "הוראה בזוג"
+    ],
+    "vi_forms": [
+      "đồng giáo viên",
+      "đồng giảng dạy",
+      "dạy đôi",
+      "hai giáo viên",
+      "giảng dạy chung"
+    ],
+    "kz_forms": [
+      "бірлесіп оқыту",
+      "қос мұғалім",
+      "екі оқытушы",
+      "бірге оқыту",
+      "жұптасып оқыту"
+    ],
+    "zh_forms": [
+      "协同教学",
+      "双师授课",
+      "合作教学",
+      "双教师",
+      "团队教学",
+      "助教"
+    ],
+    "meaning": "Omniscol domain concept: co-teaching",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "absence": {
+    "fr_forms": [
+      "absence",
+      "indisponibilité",
+      "congé",
+      "arrêt",
+      "absence ponctuelle"
+    ],
+    "en_forms": [
+      "absence",
+      "leave",
+      "time off"
+    ],
+    "de_forms": [
+      "abwesenheit",
+      "abwesenheiten",
+      "fehlzeit",
+      "ausfall",
+      "fehlen",
+      "freistellung"
+    ],
+    "es_forms": [
+      "ausencia",
+      "ausencias",
+      "baja",
+      "permiso",
+      "indisponibilidad"
+    ],
+    "it_forms": [
+      "assenza",
+      "assenze",
+      "indisponibilità",
+      "congedo",
+      "permesso"
+    ],
+    "pt_forms": [
+      "ausência",
+      "ausências",
+      "falta",
+      "licença",
+      "afastamento"
+    ],
+    "nl_forms": [
+      "afwezigheid",
+      "afwezigheden",
+      "verzuim",
+      "verlof",
+      "afwezig"
+    ],
+    "pl_forms": [
+      "nieobecność",
+      "nieobecności",
+      "absencja",
+      "zwolnienie",
+      "urlop"
+    ],
+    "ru_forms": [
+      "отсутствие",
+      "отсутствия",
+      "пропуск",
+      "отгул",
+      "больничный",
+      "отпуск"
+    ],
+    "ar_forms": [
+      "غياب",
+      "غيابات",
+      "تغيب",
+      "إجازة",
+      "عدم حضور"
+    ],
+    "he_forms": [
+      "היעדרות",
+      "היעדרויות",
+      "חיסור",
+      "חופשה",
+      "אי נוכחות",
+      "העדרות"
+    ],
+    "vi_forms": [
+      "vắng mặt",
+      "vắng",
+      "nghỉ",
+      "nghỉ phép",
+      "không có mặt"
+    ],
+    "kz_forms": [
+      "қатыспау",
+      "қатыспаулар",
+      "келмеу",
+      "болмау",
+      "уақытша болмау"
+    ],
+    "zh_forms": [
+      "缺勤",
+      "请假",
+      "休假",
+      "旷课",
+      "缺席"
+    ],
+    "meaning": "Omniscol domain concept: absence",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "conflict"
+    ]
+  },
+  "substitution": {
+    "fr_forms": [
+      "remplacement",
+      "suppléance",
+      "substitution",
+      "remplaçant"
+    ],
+    "en_forms": [
+      "substitution",
+      "substitute",
+      "replacement"
+    ],
+    "de_forms": [
+      "vertretung",
+      "vertretungen",
+      "vertretungslehrkraft",
+      "stellvertreter",
+      "ersatz",
+      "vertretungsunterricht"
+    ],
+    "es_forms": [
+      "sustitución",
+      "sustituciones",
+      "sustituto",
+      "suplencia",
+      "profesor suplente",
+      "reemplazo",
+      "reposición"
+    ],
+    "it_forms": [
+      "sostituzione",
+      "sostituzioni",
+      "supplenza",
+      "sostituto",
+      "supplente"
+    ],
+    "pt_forms": [
+      "substituição",
+      "substituições",
+      "substituto",
+      "reposição"
+    ],
+    "nl_forms": [
+      "vervanging",
+      "vervangingen",
+      "vervanger",
+      "invaller",
+      "waarneming"
+    ],
+    "pl_forms": [
+      "zastępstwo",
+      "zastępstwa",
+      "zastępca",
+      "zastąpienie",
+      "substytucja"
+    ],
+    "ru_forms": [
+      "замещение",
+      "замена",
+      "подмена",
+      "замещающий",
+      "замещающий преподаватель"
+    ],
+    "ar_forms": [
+      "استبدال",
+      "تعويض",
+      "بديل",
+      "معلم بديل",
+      "إحلال"
+    ],
+    "he_forms": [
+      "החלפה",
+      "מחליף",
+      "מורה מחליף",
+      "החלפת מורה",
+      "מילוי מקום",
+      "מחליפים"
+    ],
+    "vi_forms": [
+      "thay thế",
+      "dạy thay",
+      "giáo viên thay thế",
+      "người thay thế"
+    ],
+    "kz_forms": [
+      "алмастыру",
+      "алмастырушы",
+      "ауыстыру",
+      "орнын басу",
+      "алмастыруды басқару"
+    ],
+    "zh_forms": [
+      "代课",
+      "代课教师",
+      "替代",
+      "顶替",
+      "替课"
+    ],
+    "meaning": "Omniscol domain concept: substitution",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "substitution-policy": {
+    "fr_forms": [
+      "politique de remplacement",
+      "règle de substitution",
+      "ordre de remplacement"
+    ],
+    "en_forms": [
+      "substitution policy",
+      "replacement rule"
+    ],
+    "de_forms": [
+      "vertretungsregel",
+      "vertretungsregeln",
+      "vertretungsstrategie",
+      "ersatzregel",
+      "vertretungsreihenfolge"
+    ],
+    "es_forms": [
+      "política de sustitución",
+      "regla de reemplazo",
+      "orden de sustitución",
+      "criterios de suplencia"
+    ],
+    "it_forms": [
+      "regole di sostituzione",
+      "politica di sostituzione",
+      "criteri di supplenza",
+      "ordine di sostituzione"
+    ],
+    "pt_forms": [
+      "regra de substituição",
+      "política de substituição",
+      "ordem de substituição",
+      "critério de substituição"
+    ],
+    "nl_forms": [
+      "vervangingsbeleid",
+      "vervangingsregel",
+      "vervangingsvolgorde",
+      "regels voor vervanging"
+    ],
+    "pl_forms": [
+      "zasady zastępstw",
+      "reguła zastępstwa",
+      "polityka zastępstw",
+      "kolejność zastępstw"
+    ],
+    "ru_forms": [
+      "политика замещений",
+      "правило замещения",
+      "порядок замещения",
+      "правила замен",
+      "очередь замещений"
+    ],
+    "ar_forms": [
+      "قواعد الاستبدال",
+      "سياسة الاستبدال",
+      "قاعدة التعويض",
+      "ترتيب الاستبدال"
+    ],
+    "he_forms": [
+      "מדיניות החלפה",
+      "כללי החלפה",
+      "כלל החלפה",
+      "סדר החלפות",
+      "כללי מחליפים",
+      "מדיניות מחליפים"
+    ],
+    "vi_forms": [
+      "quy tắc thay thế",
+      "chính sách thay thế",
+      "thứ tự thay thế",
+      "nguyên tắc dạy thay"
+    ],
+    "kz_forms": [
+      "алмастыру ережесі",
+      "алмастыру саясаты",
+      "ауыстыру тәртібі",
+      "алмастыру реті"
+    ],
+    "zh_forms": [
+      "代课规则",
+      "代课安排",
+      "代课策略",
+      "替代规则",
+      "代课顺序"
+    ],
+    "meaning": "Omniscol domain concept: substitution-policy",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "solver": {
+    "fr_forms": [
+      "algorithme de génération",
+      "génération automatique",
+      "solveur",
+      "ia",
+      "ia métaheuristique"
+    ],
+    "en_forms": [
+      "solver",
+      "automatic generation",
+      "optimizer",
+      "scheduling engine"
+    ],
+    "de_forms": [
+      "generierungsalgorithmus",
+      "automatische generierung",
+      "algorithmus",
+      "optimierer",
+      "automatische erstellung",
+      "generator"
+    ],
+    "es_forms": [
+      "generación automática",
+      "algoritmo de generación",
+      "optimizador",
+      "motor de horarios",
+      "algoritmo de compilación"
+    ],
+    "it_forms": [
+      "algoritmo di generazione",
+      "generazione automatica",
+      "motore di pianificazione",
+      "ottimizzatore",
+      "risolutore",
+      "solver"
+    ],
+    "pt_forms": [
+      "geração automática",
+      "gerador de horários",
+      "algoritmo de geração",
+      "otimizador",
+      "motor de geração"
+    ],
+    "nl_forms": [
+      "roostergeneratie",
+      "automatische generatie",
+      "generatie-algoritme",
+      "optimalisatie",
+      "solver"
+    ],
+    "pl_forms": [
+      "automatyczne generowanie",
+      "generowanie planu",
+      "generator",
+      "optymalizator",
+      "algorytm"
+    ],
+    "ru_forms": [
+      "алгоритм формирования",
+      "автоматическое формирование",
+      "формирование расписания",
+      "решатель",
+      "оптимизатор",
+      "алгоритм"
+    ],
+    "ar_forms": [
+      "التوليد التلقائي",
+      "توليد تلقائي",
+      "خوارزمية التوليد",
+      "محرك الجدولة",
+      "ذكاء اصطناعي",
+      "محسّن"
+    ],
+    "he_forms": [
+      "יצירה אוטומטית",
+      "הפקה אוטומטית",
+      "אלגוריתם",
+      "אלגוריתם יצירה",
+      "מנוע שיבוץ",
+      "שיבוץ אוטומטי",
+      "מיטוב"
+    ],
+    "vi_forms": [
+      "thuật toán tạo thời khóa biểu",
+      "tạo tự động",
+      "thuật toán",
+      "tự động xếp lịch",
+      "trí tuệ nhân tạo"
+    ],
+    "kz_forms": [
+      "кесте генерациясы",
+      "автоматты генерация",
+      "алгоритм",
+      "кесте жасау алгоритмі",
+      "оңтайландырушы",
+      "автоматты кесте"
+    ],
+    "zh_forms": [
+      "自动排课",
+      "自动生成",
+      "排课算法",
+      "求解器",
+      "排课引擎",
+      "智能排课"
+    ],
+    "meaning": "Omniscol domain concept: solver",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "conflict": {
+    "fr_forms": [
+      "conflit",
+      "alerte",
+      "incompatibilité détectée",
+      "chevauchement",
+      "collision"
+    ],
+    "en_forms": [
+      "conflict",
+      "alert",
+      "overlap",
+      "clash"
+    ],
+    "de_forms": [
+      "konflikt",
+      "konflikte",
+      "überschneidung",
+      "kollision",
+      "doppelbelegung",
+      "warnung"
+    ],
+    "es_forms": [
+      "conflicto",
+      "conflictos",
+      "alerta",
+      "solapamiento",
+      "choque de horarios"
+    ],
+    "it_forms": [
+      "conflitto",
+      "conflitti",
+      "sovrapposizione",
+      "collisione",
+      "allerta"
+    ],
+    "pt_forms": [
+      "conflito",
+      "conflitos",
+      "sobreposição",
+      "choque",
+      "alerta",
+      "colisão"
+    ],
+    "nl_forms": [
+      "conflict",
+      "conflicten",
+      "overlap",
+      "botsing",
+      "alert"
+    ],
+    "pl_forms": [
+      "konflikt",
+      "konflikty",
+      "kolizja",
+      "nakładanie się",
+      "alert",
+      "sprzeczność"
+    ],
+    "ru_forms": [
+      "конфликт",
+      "конфликты",
+      "наложение",
+      "пересечение",
+      "коллизия",
+      "накладка"
+    ],
+    "ar_forms": [
+      "تعارض",
+      "تعارضات",
+      "تنبيه",
+      "تداخل",
+      "تصادم",
+      "تضارب"
+    ],
+    "he_forms": [
+      "התנגשות",
+      "התנגשויות",
+      "התראה",
+      "חפיפה",
+      "התנגשות חוסמת",
+      "סתירה"
+    ],
+    "vi_forms": [
+      "xung đột",
+      "trùng lịch",
+      "cảnh báo",
+      "chồng chéo",
+      "va chạm"
+    ],
+    "kz_forms": [
+      "қайшылық",
+      "қайшылықтар",
+      "қабаттасу",
+      "коллизия"
+    ],
+    "zh_forms": [
+      "冲突",
+      "碰撞",
+      "重叠",
+      "占用冲突",
+      "撞车",
+      "警告"
+    ],
+    "meaning": "Omniscol domain concept: conflict",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "absence"
+    ]
+  },
+  "diagnostic": {
+    "fr_forms": [
+      "diagnostic",
+      "vérification",
+      "contrôle",
+      "alerte de configuration",
+      "alerte de cohérence"
+    ],
+    "en_forms": [
+      "diagnostic",
+      "validation",
+      "sanity check"
+    ],
+    "de_forms": [
+      "diagnose",
+      "diagnostik",
+      "prüfung",
+      "kontrolle",
+      "validierung",
+      "plausibilitätsprüfung"
+    ],
+    "es_forms": [
+      "diagnóstico",
+      "verificación",
+      "validación",
+      "control",
+      "comprobación de coherencia"
+    ],
+    "it_forms": [
+      "diagnostica",
+      "diagnosi",
+      "verifica",
+      "controllo di coerenza",
+      "segnalazione"
+    ],
+    "pt_forms": [
+      "diagnóstico",
+      "verificação",
+      "validação",
+      "controle de coerência",
+      "alerta de configuração"
+    ],
+    "nl_forms": [
+      "diagnose",
+      "controle",
+      "validatie",
+      "verificatie",
+      "waarschuwing"
+    ],
+    "pl_forms": [
+      "diagnostyka",
+      "weryfikacja",
+      "kontrola",
+      "sprawdzenie",
+      "walidacja"
+    ],
+    "ru_forms": [
+      "диагностика",
+      "проверка",
+      "контроль",
+      "проблемы конфигурации",
+      "предупреждение",
+      "валидация"
+    ],
+    "ar_forms": [
+      "تشخيص",
+      "فحص",
+      "تحقق",
+      "تنبيه إعداد",
+      "تنبيه اتساق"
+    ],
+    "he_forms": [
+      "אבחון",
+      "בדיקה",
+      "אימות",
+      "בקרה",
+      "התראת תצורה",
+      "בדיקת תקינות"
+    ],
+    "vi_forms": [
+      "chẩn đoán",
+      "kiểm tra",
+      "xác minh",
+      "cảnh báo cấu hình",
+      "kiểm tra tính hợp lệ"
+    ],
+    "kz_forms": [
+      "диагностика",
+      "тексеру",
+      "бақылау",
+      "сәйкестік тексеруі",
+      "ескерту",
+      "талдау"
+    ],
+    "zh_forms": [
+      "诊断",
+      "检查",
+      "校验",
+      "一致性检查",
+      "问题检测",
+      "核查"
+    ],
+    "meaning": "Omniscol domain concept: diagnostic",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "panel": {
+    "fr_forms": [
+      "panneau",
+      "panneau d'affichage",
+      "écran d'accueil",
+      "écran d'entrée",
+      "écran de hall"
+    ],
+    "en_forms": [
+      "panel",
+      "display panel",
+      "lobby screen",
+      "hall screen"
+    ],
+    "de_forms": [
+      "anzeigetafel",
+      "anzeigepanel",
+      "infotafel",
+      "hallenbildschirm",
+      "aushangbildschirm",
+      "monitor"
+    ],
+    "es_forms": [
+      "panel de visualización",
+      "panel",
+      "panel de anuncios",
+      "pantalla de vestíbulo",
+      "pantalla de hall"
+    ],
+    "it_forms": [
+      "pannello informativo",
+      "pannello",
+      "schermo informativo",
+      "schermo all'ingresso",
+      "display"
+    ],
+    "pt_forms": [
+      "painel de exibição",
+      "painel de anúncios",
+      "painel digital",
+      "painel informativo",
+      "tela de entrada",
+      "tela do saguão"
+    ],
+    "nl_forms": [
+      "informatiescherm",
+      "scherm",
+      "displaypaneel",
+      "halscherm",
+      "prikbord"
+    ],
+    "pl_forms": [
+      "panel informacyjny",
+      "ekran informacyjny",
+      "tablica informacyjna",
+      "ekran w holu",
+      "wyświetlacz"
+    ],
+    "ru_forms": [
+      "информационная панель",
+      "табло",
+      "экран в холле",
+      "настенный экран",
+      "экран расписания"
+    ],
+    "ar_forms": [
+      "لوحة العرض",
+      "شاشة العرض",
+      "شاشة الردهة",
+      "شاشة الاستقبال",
+      "لوحة إعلانية"
+    ],
+    "he_forms": [
+      "לוח תצוגה",
+      "לוח מודעות",
+      "מסך תצוגה",
+      "מסך לובי",
+      "מסך כניסה",
+      "לוח הצגה"
+    ],
+    "vi_forms": [
+      "bảng thông tin",
+      "bảng hiển thị",
+      "màn hình sảnh",
+      "màn hình hiển thị",
+      "bảng tin"
+    ],
+    "kz_forms": [
+      "ақпарат тақтасы",
+      "тақта",
+      "ақпарат экраны",
+      "холл экраны",
+      "табло",
+      "көрсету тақтасы"
+    ],
+    "zh_forms": [
+      "信息显示屏",
+      "显示屏",
+      "信息面板",
+      "大厅屏幕",
+      "公告屏",
+      "展示屏"
+    ],
+    "meaning": "Omniscol domain concept: panel",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "dashboard": {
+    "fr_forms": [
+      "tableau de bord",
+      "dashboard",
+      "statistiques",
+      "indicateurs"
+    ],
+    "en_forms": [
+      "dashboard",
+      "stats",
+      "indicators",
+      "KPIs"
+    ],
+    "de_forms": [
+      "dashboard",
+      "übersicht",
+      "statistiken",
+      "kennzahlen",
+      "indikatoren"
+    ],
+    "es_forms": [
+      "tablero de control",
+      "tablero",
+      "panel de control",
+      "estadísticas",
+      "indicadores"
+    ],
+    "it_forms": [
+      "dashboard",
+      "pannello di controllo",
+      "cruscotto",
+      "statistiche",
+      "indicatori"
+    ],
+    "pt_forms": [
+      "painel de controle",
+      "painel",
+      "dashboard",
+      "estatísticas",
+      "indicadores"
+    ],
+    "nl_forms": [
+      "dashboard",
+      "statistieken",
+      "indicatoren",
+      "overzicht",
+      "kpi's"
+    ],
+    "pl_forms": [
+      "panel zarządczy",
+      "pulpit",
+      "statystyki",
+      "wskaźniki",
+      "panel statystyk"
+    ],
+    "ru_forms": [
+      "сводная панель",
+      "панель показателей",
+      "статистика",
+      "показатели",
+      "панель статистики"
+    ],
+    "ar_forms": [
+      "لوحة التحكم",
+      "لوحة المعلومات",
+      "لوحة القيادة",
+      "إحصائيات",
+      "مؤشرات"
+    ],
+    "he_forms": [
+      "לוח מחוונים",
+      "לוח בקרה",
+      "סטטיסטיקה",
+      "סטטיסטיקות",
+      "מדדים",
+      "אינדיקטורים"
+    ],
+    "vi_forms": [
+      "trang tổng quan",
+      "bảng điều khiển",
+      "tổng quan",
+      "thống kê",
+      "chỉ số"
+    ],
+    "kz_forms": [
+      "басқару тақтасы",
+      "мектеп панелі",
+      "статистика",
+      "көрсеткіштер",
+      "тақта"
+    ],
+    "zh_forms": [
+      "仪表盘",
+      "仪表板",
+      "统计",
+      "数据看板",
+      "指标",
+      "统计面板"
+    ],
+    "meaning": "Omniscol domain concept: dashboard",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "share-link": {
+    "fr_forms": [
+      "partage",
+      "lien partagé",
+      "lien public",
+      "partage par jeton",
+      "lien de partage"
+    ],
+    "en_forms": [
+      "share link",
+      "public link",
+      "token-based sharing"
+    ],
+    "de_forms": [
+      "freigabelink",
+      "freigabelinks",
+      "teilen",
+      "öffentlicher link",
+      "geteilter link",
+      "freigabe"
+    ],
+    "es_forms": [
+      "enlace de compartición",
+      "enlace compartido",
+      "enlace público",
+      "compartir horario",
+      "enlace por token"
+    ],
+    "it_forms": [
+      "link di condivisione",
+      "condivisione",
+      "link pubblico",
+      "condivisione tramite token",
+      "collegamento condiviso"
+    ],
+    "pt_forms": [
+      "link de compartilhamento",
+      "compartilhamento",
+      "link público",
+      "link compartilhado",
+      "compartilhar"
+    ],
+    "nl_forms": [
+      "deellink",
+      "delen",
+      "gedeelde link",
+      "publieke link",
+      "deelkoppeling"
+    ],
+    "pl_forms": [
+      "link udostępniania",
+      "udostępnianie",
+      "link publiczny",
+      "współdzielony link",
+      "link do udostępnienia"
+    ],
+    "ru_forms": [
+      "ссылка общего доступа",
+      "общий доступ",
+      "публичная ссылка",
+      "ссылка для обмена",
+      "ссылка по токену"
+    ],
+    "ar_forms": [
+      "رابط المشاركة",
+      "مشاركة",
+      "رابط عام",
+      "رابط مشترك",
+      "مشاركة عبر رمز"
+    ],
+    "he_forms": [
+      "קישור שיתוף",
+      "שיתוף",
+      "קישור ציבורי",
+      "קישור משותף",
+      "שיתוף קישור",
+      "שיתוף בטוקן"
+    ],
+    "vi_forms": [
+      "liên kết chia sẻ",
+      "chia sẻ",
+      "liên kết công khai",
+      "liên kết bằng mã thông báo"
+    ],
+    "kz_forms": [
+      "бөлісу сілтемесі",
+      "бөлісу",
+      "ашық сілтеме",
+      "көпшілік сілтеме",
+      "сілтеме арқылы бөлісу"
+    ],
+    "zh_forms": [
+      "分享链接",
+      "共享链接",
+      "公开链接",
+      "分享",
+      "共享",
+      "链接分享"
+    ],
+    "meaning": "Omniscol domain concept: share-link",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "staffing": {
+    "fr_forms": [
+      "surveillance",
+      "encadrement",
+      "planning de surveillance",
+      "grille de surveillance",
+      "grille d'encadrement"
+    ],
+    "en_forms": [
+      "staffing",
+      "supervision",
+      "monitoring",
+      "duty grid"
+    ],
+    "de_forms": [
+      "personaleinsatz",
+      "aufsichtsplanung",
+      "aufsichtsplan",
+      "einsatzplanung",
+      "überwachung",
+      "aufsichtsraster"
+    ],
+    "es_forms": [
+      "gestión de personal",
+      "vigilancia",
+      "supervisión",
+      "cuadrícula de personal",
+      "planificación de guardias"
+    ],
+    "it_forms": [
+      "servizio del personale",
+      "sorveglianza",
+      "supervisione",
+      "griglia di sorveglianza",
+      "piano di vigilanza"
+    ],
+    "pt_forms": [
+      "gestão de pessoal",
+      "escala de pessoal",
+      "supervisão",
+      "plano de vigilância",
+      "alocação de pessoal"
+    ],
+    "nl_forms": [
+      "personeelsinzet",
+      "toezicht",
+      "surveillance",
+      "bezetting",
+      "toezichtrooster"
+    ],
+    "pl_forms": [
+      "obsada personelu",
+      "dyżury",
+      "nadzór",
+      "grafik dyżurów",
+      "plan nadzoru",
+      "obsada"
+    ],
+    "ru_forms": [
+      "управление персоналом",
+      "дежурства",
+      "надзор",
+      "график дежурств",
+      "сетка дежурств",
+      "распределение персонала"
+    ],
+    "ar_forms": [
+      "إدارة الموظفين",
+      "إشراف",
+      "مراقبة",
+      "جدول الإشراف",
+      "شبكة الإشراف",
+      "تأطير"
+    ],
+    "he_forms": [
+      "שיבוץ צוות",
+      "השגחה",
+      "פיקוח",
+      "רשת השגחה",
+      "תורנויות",
+      "רשת תורנות",
+      "כוח אדם"
+    ],
+    "vi_forms": [
+      "quản lý nhân sự",
+      "phân công giám sát",
+      "giám sát",
+      "lịch trực",
+      "bảng phân công trực"
+    ],
+    "kz_forms": [
+      "кезекшілік",
+      "қызметкерлерді басқару",
+      "кезекшілік кестесі",
+      "бақылау кестесі",
+      "кезекшілерді бөлу"
+    ],
+    "zh_forms": [
+      "人员调度",
+      "值班安排",
+      "监督安排",
+      "值班表",
+      "人员排班",
+      "调度网格"
+    ],
+    "meaning": "Omniscol domain concept: staffing",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "data-import": {
+    "fr_forms": [
+      "import",
+      "importation",
+      "injection",
+      "copier-coller massif",
+      "import csv",
+      "import excel",
+      "import tableur"
+    ],
+    "en_forms": [
+      "import",
+      "data import",
+      "mass import",
+      "csv import",
+      "excel import"
+    ],
+    "de_forms": [
+      "import",
+      "importieren",
+      "datenimport",
+      "csv-import",
+      "excel-import",
+      "masseneinlesen"
+    ],
+    "es_forms": [
+      "importar",
+      "importación",
+      "importar csv",
+      "importar excel",
+      "importación masiva"
+    ],
+    "it_forms": [
+      "importazione",
+      "importare",
+      "importazione csv",
+      "importazione excel",
+      "incolla massivo"
+    ],
+    "pt_forms": [
+      "importação",
+      "importar",
+      "importação csv",
+      "importação excel",
+      "importação em massa"
+    ],
+    "nl_forms": [
+      "import",
+      "importeren",
+      "importeer",
+      "csv-import",
+      "excel-import",
+      "gegevens importeren"
+    ],
+    "pl_forms": [
+      "import danych",
+      "import",
+      "importowanie",
+      "import csv",
+      "import excel",
+      "wczytywanie danych"
+    ],
+    "ru_forms": [
+      "импорт",
+      "импорт данных",
+      "загрузка данных",
+      "массовый импорт",
+      "импорт csv",
+      "импорт excel"
+    ],
+    "ar_forms": [
+      "استيراد",
+      "استيراد البيانات",
+      "استيراد جماعي",
+      "استيراد CSV",
+      "استيراد إكسل",
+      "استيراد من جدول"
+    ],
+    "he_forms": [
+      "ייבוא",
+      "ייבוא נתונים",
+      "ייבוא המוני",
+      "ייבוא CSV",
+      "ייבוא אקסל",
+      "העלאת נתונים",
+      "ייבוא טבלה"
+    ],
+    "vi_forms": [
+      "nhập dữ liệu",
+      "nhập",
+      "nhập csv",
+      "nhập excel",
+      "nhập hàng loạt",
+      "dán dữ liệu"
+    ],
+    "kz_forms": [
+      "импорттау",
+      "импорт",
+      "деректерді импорттау",
+      "алып келу",
+      "csv импорт",
+      "excel импорт",
+      "кесте импорты"
+    ],
+    "zh_forms": [
+      "导入",
+      "数据导入",
+      "批量导入",
+      "CSV导入",
+      "Excel导入",
+      "导入数据"
+    ],
+    "meaning": "Omniscol domain concept: data-import",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "data-export"
+    ]
+  },
+  "bulk-edit": {
+    "fr_forms": [
+      "en masse",
+      "en batterie",
+      "en tableau",
+      "en lot",
+      "modification en masse",
+      "édition en masse",
+      "création en masse",
+      "saisie en masse",
+      "modification en tableau",
+      "édition tabulaire"
+    ],
+    "en_forms": [
+      "bulk",
+      "in bulk",
+      "batch",
+      "mass edit",
+      "bulk edit",
+      "bulk editing",
+      "table edit",
+      "tabular edit"
+    ],
+    "meaning": "Omniscol domain concept: bulk-edit",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "data-export": {
+    "fr_forms": [
+      "export",
+      "exportation",
+      "sortie",
+      "sortie csv",
+      "sortie ical"
+    ],
+    "en_forms": [
+      "export",
+      "data export"
+    ],
+    "de_forms": [
+      "export",
+      "exportieren",
+      "datenexport",
+      "csv-export",
+      "ausgabe"
+    ],
+    "es_forms": [
+      "exportar",
+      "exportación",
+      "exportar csv",
+      "exportar datos",
+      "salida ical"
+    ],
+    "it_forms": [
+      "esportazione",
+      "esportare",
+      "esportazione csv",
+      "esportazione dati",
+      "esportazione ical"
+    ],
+    "pt_forms": [
+      "exportação",
+      "exportar",
+      "exportação csv",
+      "exportação ical"
+    ],
+    "nl_forms": [
+      "export",
+      "exporteren",
+      "exporteer",
+      "csv-export",
+      "gegevens exporteren"
+    ],
+    "pl_forms": [
+      "eksport danych",
+      "eksport",
+      "eksportowanie",
+      "eksport csv",
+      "eksport ical"
+    ],
+    "ru_forms": [
+      "экспорт",
+      "экспорт данных",
+      "выгрузка",
+      "выгрузка данных",
+      "экспорт csv"
+    ],
+    "ar_forms": [
+      "تصدير",
+      "تصدير البيانات",
+      "إخراج",
+      "تصدير CSV",
+      "تصدير iCal"
+    ],
+    "he_forms": [
+      "ייצוא",
+      "ייצוא נתונים",
+      "ייצוא CSV",
+      "ייצוא iCal",
+      "הוצאת נתונים"
+    ],
+    "vi_forms": [
+      "xuất dữ liệu",
+      "xuất",
+      "xuất csv",
+      "xuất ical",
+      "trích xuất"
+    ],
+    "kz_forms": [
+      "экспорттау",
+      "экспорт",
+      "деректерді экспорттау",
+      "шығару",
+      "csv экспорт",
+      "ical экспорт"
+    ],
+    "zh_forms": [
+      "导出",
+      "数据导出",
+      "导出数据",
+      "CSV导出",
+      "导出文件"
+    ],
+    "meaning": "Omniscol domain concept: data-export",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "data-import"
+    ]
+  },
+  "ical": {
+    "fr_forms": [
+      "ical",
+      "ics",
+      "abonnement calendrier",
+      "lien ical",
+      "export ical"
+    ],
+    "en_forms": [
+      "ical",
+      "ics",
+      "calendar subscription"
+    ],
+    "de_forms": [
+      "ical",
+      "ics",
+      "kalenderabonnement",
+      "kalender-feed",
+      "ical-link",
+      "abonnement"
+    ],
+    "es_forms": [
+      "ical",
+      "ics",
+      "suscripción de calendario",
+      "enlace ical",
+      "exportar ical"
+    ],
+    "it_forms": [
+      "ical",
+      "ics",
+      "abbonamento al calendario",
+      "link ical",
+      "esportazione ical"
+    ],
+    "pt_forms": [
+      "ical",
+      "ics",
+      "assinatura de calendário",
+      "link ical",
+      "exportação ical"
+    ],
+    "nl_forms": [
+      "ical",
+      "ics",
+      "agenda-abonnement",
+      "ical-link",
+      "ical-export"
+    ],
+    "pl_forms": [
+      "ical",
+      "ics",
+      "subskrypcja kalendarza",
+      "link ical",
+      "kanał kalendarza"
+    ],
+    "ru_forms": [
+      "ical",
+      "ics",
+      "подписка на календарь",
+      "ссылка ical",
+      "экспорт календаря"
+    ],
+    "ar_forms": [
+      "iCal",
+      "ICS",
+      "اشتراك التقويم",
+      "رابط iCal",
+      "تصدير iCal"
+    ],
+    "he_forms": [
+      "iCal",
+      "ics",
+      "מנוי ליומן",
+      "קישור iCal",
+      "ייצוא iCal",
+      "סנכרון יומן"
+    ],
+    "vi_forms": [
+      "ical",
+      "ics",
+      "đăng ký lịch",
+      "liên kết ical",
+      "xuất ical"
+    ],
+    "kz_forms": [
+      "ical",
+      "ics",
+      "күнтізбеге жазылу",
+      "ical сілтемесі",
+      "күнтізбе синхрондау"
+    ],
+    "zh_forms": [
+      "iCal",
+      "ics",
+      "日历订阅",
+      "日历链接",
+      "iCal链接",
+      "订阅日历"
+    ],
+    "meaning": "Omniscol domain concept: ical",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "api-token": {
+    "fr_forms": [
+      "jeton api",
+      "token api",
+      "clé api",
+      "jeton d'authentification"
+    ],
+    "en_forms": [
+      "api token",
+      "api key",
+      "bearer token"
+    ],
+    "de_forms": [
+      "api-token",
+      "api-schlüssel",
+      "api-key",
+      "token",
+      "authentifizierungstoken",
+      "zugriffstoken"
+    ],
+    "es_forms": [
+      "token de api",
+      "clave de api",
+      "token de autenticación",
+      "token",
+      "bearer token"
+    ],
+    "it_forms": [
+      "token api",
+      "chiave api",
+      "token",
+      "token di autenticazione",
+      "token di accesso"
+    ],
+    "pt_forms": [
+      "chave de api",
+      "token de api",
+      "chave api",
+      "token de autenticação"
+    ],
+    "nl_forms": [
+      "api-token",
+      "api-sleutel",
+      "token",
+      "authenticatietoken",
+      "toegangstoken"
+    ],
+    "pl_forms": [
+      "token api",
+      "klucz api",
+      "token uwierzytelniający",
+      "klucz dostępu",
+      "token autoryzacyjny"
+    ],
+    "ru_forms": [
+      "токен api",
+      "api токен",
+      "ключ api",
+      "токен доступа",
+      "токен аутентификации"
+    ],
+    "ar_forms": [
+      "رمز API",
+      "رمز المصادقة",
+      "مفتاح API",
+      "رمز الوصول"
+    ],
+    "he_forms": [
+      "טוקן",
+      "טוקן API",
+      "מפתח API",
+      "טוקן אימות",
+      "אסימון API",
+      "מפתח גישה"
+    ],
+    "vi_forms": [
+      "mã thông báo api",
+      "token api",
+      "khóa api",
+      "mã xác thực"
+    ],
+    "kz_forms": [
+      "api токені",
+      "токен",
+      "api кілті",
+      "кілт",
+      "аутентификация токені",
+      "bearer токен"
+    ],
+    "zh_forms": [
+      "API令牌",
+      "API密钥",
+      "身份验证令牌",
+      "接口密钥",
+      "令牌",
+      "密钥"
+    ],
+    "meaning": "Omniscol domain concept: api-token",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "program": {
+    "fr_forms": [
+      "programme",
+      "cursus",
+      "parcours",
+      "formation",
+      "parcours pédagogique",
+      "maquette pédagogique",
+      "maquette",
+      "plaquette pédagogique",
+      "plaquette"
+    ],
+    "en_forms": [
+      "program",
+      "programme",
+      "curriculum",
+      "track"
+    ],
+    "de_forms": [
+      "studienprogramm",
+      "programm",
+      "curriculum",
+      "lehrplan",
+      "studiengang",
+      "ausbildung"
+    ],
+    "es_forms": [
+      "programa",
+      "programa formativo",
+      "plan de estudios",
+      "itinerario",
+      "currículo"
+    ],
+    "it_forms": [
+      "programma",
+      "programma di studi",
+      "percorso",
+      "piano di studi",
+      "curriculum",
+      "corso di studi"
+    ],
+    "pt_forms": [
+      "programa",
+      "programas",
+      "currículo",
+      "estrutura curricular",
+      "percurso",
+      "matriz curricular",
+      "plano de curso"
+    ],
+    "nl_forms": [
+      "curriculum",
+      "opleiding",
+      "studieprogramma",
+      "leerplan",
+      "traject",
+      "programma"
+    ],
+    "pl_forms": [
+      "program nauczania",
+      "program",
+      "program kształcenia",
+      "cykl kształcenia",
+      "kierunek",
+      "tok studiów"
+    ],
+    "ru_forms": [
+      "программа обучения",
+      "программа",
+      "учебный план",
+      "курс обучения",
+      "учебная программа",
+      "направление подготовки"
+    ],
+    "ar_forms": [
+      "برنامج",
+      "برنامج دراسي",
+      "منهج",
+      "مسار",
+      "مسار دراسي",
+      "تكوين"
+    ],
+    "he_forms": [
+      "תכנית לימודים",
+      "תכנית",
+      "מסלול",
+      "תוכנית הכשרה",
+      "מערך לימודים",
+      "מערך הקורסים",
+      "תוכנית"
+    ],
+    "vi_forms": [
+      "chương trình đào tạo",
+      "chương trình",
+      "chương trình giảng dạy",
+      "ngành học",
+      "lộ trình học",
+      "khung chương trình"
+    ],
+    "kz_forms": [
+      "бағдарлама",
+      "оқу бағдарламасы",
+      "оқу жоспары",
+      "мамандық",
+      "оқу маршруты",
+      "курс жиыны"
+    ],
+    "zh_forms": [
+      "培养方案",
+      "课程方案",
+      "专业课程",
+      "课程体系",
+      "教学计划",
+      "培养计划"
+    ],
+    "meaning": "L'ensemble des cours d'une classe ou d'une formation. \"Maquette\" / \"plaquette\" sont courants dans le supérieur ; ils se ramènent à la somme des cours (cluster `course`).",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "course-of-study": {
+    "fr_forms": [
+      "cours",
+      "matière",
+      "discipline",
+      "ue",
+      "unité d'enseignement",
+      "ec",
+      "élément constitutif",
+      "ecue",
+      "élément constitutif d'unité d'enseignement",
+      "module",
+      "unité pédagogique",
+      "UP",
+      "unité de valeur",
+      "UV"
+    ],
+    "en_forms": [
+      "course unit",
+      "module",
+      "subject",
+      "discipline"
+    ],
+    "de_forms": [
+      "fach",
+      "fächer",
+      "unterrichtsfach",
+      "modul",
+      "lehreinheit",
+      "disziplin"
+    ],
+    "es_forms": [
+      "asignatura",
+      "asignaturas",
+      "materia",
+      "módulo",
+      "unidad didáctica",
+      "disciplina"
+    ],
+    "it_forms": [
+      "materia",
+      "materie",
+      "disciplina",
+      "modulo",
+      "insegnamento",
+      "unità didattica"
+    ],
+    "pt_forms": [
+      "disciplina",
+      "disciplinas",
+      "matéria",
+      "matérias",
+      "módulo",
+      "unidade curricular"
+    ],
+    "nl_forms": [
+      "vak",
+      "vakken",
+      "module",
+      "studieonderdeel",
+      "leervak",
+      "vakgebied",
+      "discipline"
+    ],
+    "pl_forms": [
+      "przedmiot",
+      "przedmioty",
+      "moduł",
+      "dyscyplina",
+      "jednostka dydaktyczna"
+    ],
+    "ru_forms": [
+      "дисциплина",
+      "дисциплины",
+      "предмет",
+      "модуль",
+      "учебная дисциплина",
+      "учебный модуль"
+    ],
+    "ar_forms": [
+      "مادة",
+      "مواد",
+      "وحدة تعليمية",
+      "مقياس",
+      "تخصص دراسي",
+      "مساق"
+    ],
+    "he_forms": [
+      "מקצוע",
+      "מקצועות",
+      "מודול",
+      "יחידת לימוד",
+      "דיסציפלינה",
+      "תחום לימוד"
+    ],
+    "vi_forms": [
+      "môn học",
+      "môn",
+      "học phần",
+      "đơn vị học tập",
+      "bộ môn"
+    ],
+    "kz_forms": [
+      "пән",
+      "пәндер",
+      "модуль",
+      "оқу пәні",
+      "оқу бірлігі"
+    ],
+    "zh_forms": [
+      "科目",
+      "学科",
+      "课程模块",
+      "教学模块",
+      "学科科目",
+      "学习模块"
+    ],
+    "meaning": "\"Matière\" est le terme Omniscol historique (school_schema \"subject\"). Dans le supérieur français, \"UE\" / \"EC\" / \"ECUE\" sont les niveaux d'agrégation pédagogique. Dans la formation continue, \"module\" est souvent utilisé. Tous matchent sur l'entité Omniscol \"subject\".",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": [
+      "course",
+      "lesson"
+    ]
+  },
+  "syllabus": {
+    "fr_forms": [
+      "syllabus",
+      "plan de cours",
+      "descriptif de cours",
+      "fiche de cours"
+    ],
+    "en_forms": [
+      "syllabus",
+      "course outline"
+    ],
+    "de_forms": [
+      "kursbeschreibung",
+      "modulbeschreibung",
+      "syllabus",
+      "kursinhalt",
+      "stoffverteilungsplan"
+    ],
+    "es_forms": [
+      "programa de la asignatura",
+      "temario",
+      "sílabo",
+      "plan de la asignatura",
+      "guía docente"
+    ],
+    "it_forms": [
+      "programma del corso",
+      "syllabus",
+      "piano del corso",
+      "descrizione del corso",
+      "scheda del corso"
+    ],
+    "pt_forms": [
+      "plano de ensino",
+      "programa da disciplina",
+      "ementa",
+      "plano de aula",
+      "descritivo da disciplina"
+    ],
+    "nl_forms": [
+      "syllabus",
+      "cursusbeschrijving",
+      "lesplan",
+      "cursusplan",
+      "vakbeschrijving"
+    ],
+    "pl_forms": [
+      "sylabus",
+      "plan kursu",
+      "opis kursu",
+      "karta przedmiotu"
+    ],
+    "ru_forms": [
+      "программа курса",
+      "силлабус",
+      "план курса",
+      "описание курса",
+      "содержание курса"
+    ],
+    "ar_forms": [
+      "توصيف المقرر",
+      "خطة المقرر",
+      "وصف المقرر",
+      "محتوى المقرر",
+      "بطاقة المقرر"
+    ],
+    "he_forms": [
+      "סילבוס",
+      "תכנית קורס",
+      "מתווה קורס",
+      "תיאור קורס",
+      "ראשי פרקים",
+      "תוכן הקורס"
+    ],
+    "vi_forms": [
+      "đề cương môn học",
+      "đề cương",
+      "giáo trình",
+      "nội dung môn học",
+      "kế hoạch giảng dạy"
+    ],
+    "kz_forms": [
+      "силлабус",
+      "пән жоспары",
+      "курс жоспары",
+      "пән сипаттамасы",
+      "оқу жоспары"
+    ],
+    "zh_forms": [
+      "教学大纲",
+      "课程大纲",
+      "课程介绍",
+      "课程说明",
+      "课程纲要"
+    ],
+    "meaning": "Omniscol domain concept: syllabus",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "enrollment": {
+    "fr_forms": [
+      "inscription",
+      "intégration",
+      "intégration administrative",
+      "enrollment"
+    ],
+    "en_forms": [
+      "enrollment",
+      "registration",
+      "intake"
+    ],
+    "de_forms": [
+      "einschreibung",
+      "einschreibungen",
+      "anmeldung",
+      "immatrikulation",
+      "registrierung",
+      "aufnahme"
+    ],
+    "es_forms": [
+      "matrícula",
+      "matriculación",
+      "inscripción",
+      "alta de estudiantes",
+      "registro"
+    ],
+    "it_forms": [
+      "iscrizione",
+      "iscrizioni",
+      "registrazione",
+      "immatricolazione",
+      "inserimento"
+    ],
+    "pt_forms": [
+      "matrícula",
+      "matrículas",
+      "inscrição",
+      "registro"
+    ],
+    "nl_forms": [
+      "inschrijving",
+      "inschrijven",
+      "registratie",
+      "aanmelding",
+      "plaatsing"
+    ],
+    "pl_forms": [
+      "zapis",
+      "zapisy",
+      "rejestracja",
+      "wpis",
+      "przyjęcie"
+    ],
+    "ru_forms": [
+      "зачисление",
+      "запись",
+      "регистрация",
+      "приём",
+      "зачисление на курс"
+    ],
+    "ar_forms": [
+      "تسجيل",
+      "التسجيل",
+      "قيد",
+      "تسجيل الطلاب",
+      "التحاق"
+    ],
+    "he_forms": [
+      "הרשמה",
+      "רישום",
+      "שיוך",
+      "קליטה",
+      "שיבוץ לכיתה",
+      "הרשמת תלמיד"
+    ],
+    "vi_forms": [
+      "ghi danh",
+      "đăng ký",
+      "đăng ký học",
+      "nhập học",
+      "tuyển sinh"
+    ],
+    "kz_forms": [
+      "тіркеу",
+      "тіркелу",
+      "қабылдау",
+      "оқуға қабылдау",
+      "тіркелу жазбасы"
+    ],
+    "zh_forms": [
+      "注册",
+      "报名",
+      "入学",
+      "学生分配",
+      "注册入学",
+      "班级分配"
+    ],
+    "meaning": "Omniscol domain concept: enrollment",
+    "domains": [
+      "help-system",
+      "i18n"
+    ],
+    "forbidden_confusions": []
+  },
+  "_comment": "Concept glossary rebuilt from Omniscol's official _synonyms.yaml (shared with the help-system search index and the AI agent's term understanding), provided by Mr. Gilles BLANC. Supersedes the earlier 17-concept seed glossary. fr/en forms are hand-curated by Omniscol; the other languages were machine-drafted then reviewed per Omniscol's own documentation, and are treated as DRAFT pending native review per the source file's own notes.",
   "activate": {
-    "fr_forms": ["activer"],
-    "en_forms": ["activate"],
-    "pl_forms": ["aktywuj"],
-    "meaning": "action.activate: turn an account/feature ON from a disabled/inactive lifecycle state (e.g. activating a new user account)",
-    "domains": ["action.activate"],
-    "forbidden_confusions": ["enable"]
+    "fr_forms": [
+      "activer"
+    ],
+    "en_forms": [
+      "activate"
+    ],
+    "pl_forms": [
+      "aktywuj"
+    ],
+    "meaning": "action.activate: turn an account/feature ON from a disabled/inactive lifecycle state. Supplemental concept (not in Omniscol's official _synonyms.yaml, which covers domain nouns, not UI action verbs) - added because it is a real, documented bug (see languages/pl_webapp.audit.md).",
+    "domains": [
+      "ui-actions"
+    ],
+    "forbidden_confusions": [
+      "enable"
+    ]
   },
   "enable": {
-    "fr_forms": ["activer"],
-    "en_forms": ["enable"],
-    "pl_forms": ["wlacz"],
-    "meaning": "action.enable: toggle an already-existing feature/setting on, distinct lifecycle stage from account 'activation'. Currently mistranslated identically to 'activate' in Polish (both -> 'Aktywuj') - flagged by the audit.",
-    "domains": ["action.enable"],
-    "forbidden_confusions": ["activate"]
-  },
-  "director": {
-    "fr_forms": ["directeur"],
-    "en_forms": ["director"],
-    "pl_forms": ["dyrektor"],
-    "meaning": "role.director: the school's head/director, NOT the 'head teacher' (professeur principal / class tutor)",
-    "domains": ["role"],
-    "forbidden_confusions": ["head_teacher"]
+    "fr_forms": [
+      "activer"
+    ],
+    "en_forms": [
+      "enable"
+    ],
+    "pl_forms": [
+      "wlacz"
+    ],
+    "meaning": "action.enable: toggle an already-existing feature/setting on. Supplemental concept, same rationale as 'activate' above. Currently mistranslated identically to 'activate' in production Polish data (both -> 'Aktywuj').",
+    "domains": [
+      "ui-actions"
+    ],
+    "forbidden_confusions": [
+      "activate"
+    ]
   }
 }
