@@ -7,6 +7,7 @@ never be confused with - matching the technical lead's spec.
 """
 from __future__ import annotations
 
+import re
 import unicodedata
 
 
@@ -36,14 +37,27 @@ class ConceptGlossary:
         return list(self.concepts.keys())
 
     def concepts_matching_text(self, text: str, lang: str = "fr") -> list[str]:
-        """Return every concept whose surface form for `lang` appears in `text`."""
+        """
+        Return every concept whose surface form for `lang` appears in `text`,
+        matched on whole-word boundaries (not raw substring containment).
+
+        Substring containment was the original approach, but it breaks down
+        for short forms/abbreviations - e.g. the official glossary includes
+        real 2-letter French higher-ed codes like "UE" and "EC", which as a
+        plain substring match inside huge numbers of unrelated words ("que",
+        "avec", "continue"...). Word-boundary matching keeps short, legitimate
+        abbreviations usable without that collateral damage.
+        """
         if not isinstance(text, str) or not text.strip():
             return []
         norm_text = _norm(text)
         matches = []
         for concept_id, forms in self._forms_by_concept.items():
             for form in forms.get(lang, []):
-                if form and form in norm_text:
+                if not form:
+                    continue
+                pattern = r"\b" + re.escape(form) + r"\b"
+                if re.search(pattern, norm_text):
                     matches.append(concept_id)
                     break
         return matches

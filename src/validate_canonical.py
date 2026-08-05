@@ -21,7 +21,6 @@ from pathlib import Path
 from .load import load_json, save_json
 from .models import ValidationIssue
 
-
 RESERVED_FIELDS = {"concept_id", "fr", "en", "is_canonical_label"}
 
 
@@ -38,7 +37,13 @@ def validate_canonical_labels(
         current = target_translations.get(key)
         if stored is None or current is None:
             continue
-        if stored.strip() != current.strip():
+        # Case-insensitive comparison: many canonical sources (e.g. a
+        # dictionary/glossary file) store terms in lowercase, while real UI
+        # text is capitalized per normal sentence/title case. That's a
+        # capitalization convention, not a drift in the actual word choice -
+        # capitalization pattern is already checked separately in structural
+        # validation. Only flag a genuine wording change here.
+        if stored.strip().lower() != current.strip().lower():
             issues.append(ValidationIssue(
                 key, "ERROR",
                 f"Canonical label drift: stored canonical translation for concept "

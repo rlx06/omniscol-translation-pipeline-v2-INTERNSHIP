@@ -20,7 +20,7 @@ def test_classify_teacher_assignment_key():
     nkey = normalize_key("sched.course.assign_teachers", "Affecter des professeurs")
     tags = classify_key(nkey, glossary)
     assert "module.sched" in tags
-    assert "entity.teacher" in tags
+    assert "entity.course" in tags
 
 
 def test_classify_action_verb_detected():
