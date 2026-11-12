@@ -1,5 +1,9 @@
 # Omniscol Translation Pipeline — Version 2
 
+[![Tests](https://github.com/rlx06/omniscol-translation-pipeline-v2-INTERNSHIP/actions/workflows/python.yml/badge.svg)](https://github.com/rlx06/omniscol-translation-pipeline-v2-INTERNSHIP/actions/workflows/python.yml)
+![Python](https://img.shields.io/badge/python-3.11+-3776AB?logo=python&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-Gemini-4285F4?logo=googlegemini&logoColor=white)
+
 A semantic, concept-aware localization pipeline for the Omniscol school-scheduling
 platform, built during an internship as a continuation of the AI Clinic project.
 
